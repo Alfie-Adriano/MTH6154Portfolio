@@ -232,9 +232,7 @@ Ergo the investment's 10% IRR accounts for both the size and timing of the payme
 
 ## Solved exercises
 
-### Exercise 1.x (from Exercise Sheet 1)
-
-### Exercise 1 (from Exercise Sheet 1)
+### Exercise 1 (from Exercise sheet 1)
 
 You put £700 in an account at 3% nominal. How much will you have after 3 years if the interest is compounded (i) annually, (ii) monthly, (iii) semi-annually, (iv) continuously?
 
@@ -245,33 +243,78 @@ You put £700 in an account at 3% nominal. How much will you have after 3 years 
 <details>
 <summary>Show solution</summary>
 
-i)
+- i)
 Annually $n=1$
 
 $B(3)=700\left(1+\frac{0.03}{1}\right)^{1\times3}=700(1.03)^3=\boxed{£764.91}$.
 
 Interest is added once each year, giving three compounding periods.
 
-ii)
+- ii)
 Monthly $n=12$
 
 $B(3)=700\left(1+\frac{0.03}{12}\right)^{12\times3}=700(1.0025)^{36}=\boxed{£765.84}$.
 
 Interest is added at 0.25% per month over 36 compounding periods.
 
-iii)
+- iii)
 Semi-annually $n=2$
 
 $B(3)=700\left(1+\frac{0.03}{2}\right)^{2\times3}=700(1.015)^6=\boxed{£765.41}$.
 
 Interest is added at 1.5% every six months over six compounding periods.
 
-iv)
+- iv)
 Continuously
 
 $B(3)=700e^{0.03\times3}=700e^{0.09}=\boxed{£765.92}$.
 
 Interest compounds continuously, producing the highest balance of the four methods at the same nominal rate.
+
+</details>
+
+### Exercise 6
+
+Three credit card companies quote different nominal rates and compounding frequencies. They are:
+
+- Company A: 23.4% nominal rate compounded daily
+
+- Company B: 23.5% nominal rate compounded monthly
+
+- Company C: 24.2% nominal rate compounded annually.
+
+Which company offers the best deal?
+
+**Hint.** Compare their effective annual rates to find the cheapest borrowing option. Use: $r_{\text{eff}}=\left(1+\frac{r}{n}\right)^n-1$.
+
+<details>
+<summary>Show solution</summary>
+
+- Company A: 23.4% compounded daily
+
+Assuming 365 compounding periods per year:
+
+$r_{\text{eff,A}}=\left(1+\frac{0.234}{365}\right)^{365}-1\approx 0.263550=\boxed{26.3550\%}$.
+
+Daily compounding raises annual borrowing cost above 23.4%.
+
+- Company B: 23.5% compounded monthly
+
+$r_{\text{eff,B}}=\left(1+\frac{0.235}{12}\right)^{12}-1\approx 0.262039=\boxed{26.2039\%}$.
+
+Despite the higher nominal rate, Company B has a slightly lower effective rate than Company A.
+
+- Company C: 24.2% compounded annually
+
+$r_{\text{eff,C}}=\left(1+\frac{0.242}{1}\right)^1-1=0.242=\boxed{24.2\%}$.
+
+With annual compounding the nominal and effective annual rates are equal.
+
+
+To conclude, Company C gives the best deal, assuming to hold all other fees and terms equal as its effective annual borrowing rate is the lowest.
+
+</details>
+
 
 ## Spreadsheet
 
