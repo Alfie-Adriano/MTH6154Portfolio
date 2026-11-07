@@ -107,55 +107,35 @@ So although your money grew by 5%, your purchasing power has grown by only 1.94%
 ### Example 5: A varying rate
 As our example, A private equity company has placed £2million into an interest bearing account while preparing to acquire a beverage business in two years. The account pays continuously compounded interest at 2% during the first year and 4% during the second year.
 The rate is: 
-$$
-r(t) =
+$r(t) =
 \begin{cases}
 0.02, & 0 \le t < 1, \\
 0.04, & 1 \le t \le 2.
-\end{cases}
-$$
+\end{cases}$
 First we add the contribution from each year:
-$$
-\int_0^2 r(u)\,du = \int_0^1 0.02\,du + \int_1^2 0.04\,du = 0.02(1) + 0.04(1) = 0.06
-$$
+$\int_0^2 r(u)\,du = \int_0^1 0.02\,du + \int_1^2 0.04\,du = 0.02(1) + 0.04(1) = 0.06$
 Divide by the two year investment period to find the equivalent constant annual rate:
-$$
-\bar r(2) = \frac{0.06}{2} = 0.03 = 3\%
-$$
+$\bar r(2) = \frac{0.06}{2} = 0.03 = 3\%$
 Meaning the amount available for the acquisition after two years is:
-$$
-B(2) = 2{,}000{,}000\,e^{2(0.03)} = 2{,}000{,}000\,e^{0.06} \approx \text{£}2{,}123{,}673.09
-$$
+$B(2) = 2{,}000{,}000\,e^{2(0.03)} = 2{,}000{,}000\,e^{0.06} \approx \text{£}2{,}123{,}673.09$
 The company earned £123,673.09 in interest, the same it would have earned with 3% continuously compounded for both years.
 
 
 ### Example 6: IRR of an investment
 As an example, A venture capital firm invests £200,000 in a rail business that transports vegetation. It receives £20,000 after one year and then £220,000 after two years when it sells its stake including the final distribution.
 The IRR equation is:
-$$
-0 = -200{,}000 + \frac{20{,}000}{1+r_{\text{IRR}}} + \frac{220{,}000}{(1+r_{\text{IRR}})^2}
-$$
+$0 = -200{,}000 + \frac{20{,}000}{1+r_{\text{IRR}}} + \frac{220{,}000}{(1+r_{\text{IRR}})^2}$
 Dividing by £200,000 gives:
-$$
-1 = \frac{0.1}{1+r_{\text{IRR}}} + \frac{1.1}{(1+r_{\text{IRR}})^2}
-$$
+$1 = \frac{0.1}{1+r_{\text{IRR}}} + \frac{1.1}{(1+r_{\text{IRR}})^2}$
 Multiplying both sides by $(1+r_{\text{IRR}})^2$:
-$$
-(1+r_{\text{IRR}})^2 = 0.1(1+r_{\text{IRR}}) + 1.1
-$$
+$(1+r_{\text{IRR}})^2 = 0.1(1+r_{\text{IRR}}) + 1.1$
 Expanding and rearranging gives:
-$$
-r_{\text{IRR}}^2 + 1.9\,r_{\text{IRR}} - 0.2 = 0
-$$
+$r_{\text{IRR}}^2 + 1.9\,r_{\text{IRR}} - 0.2 = 0$
 Then factorising:
-$$
-(r_{\text{IRR}} - 0.1)(r_{\text{IRR}} + 2) = 0
-$$
+$(r_{\text{IRR}} - 0.1)(r_{\text{IRR}} + 2) = 0$
 The solutions are 0.1 and -2. We reject -2 since an effective annual rate must be greater than -1. Hence we get $r_{\text{IRR}}=0.10=10\%$
 Checking by discounting both payments at 10%:
-$$
-\frac{20{,}000}{1.10} + \frac{220{,}000}{1.10^2} \approx 18{,}181.82 + 181{,}818.18 = 200{,}000
-$$
+$\frac{20{,}000}{1.10} + \frac{220{,}000}{1.10^2} \approx 18{,}181.82 + 181{,}818.18 = 200{,}000$
 Ergo the investment's 10% IRR accounts for both the size and timing of the payments, rather than just the total profit received.
 
 
