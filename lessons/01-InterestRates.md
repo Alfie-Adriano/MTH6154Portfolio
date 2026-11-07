@@ -337,3 +337,20 @@ To conclude, Company C gives the best deal, assuming to hold all other fees and 
 ## Spreadsheet
 
 [01-InterestRates.xlsx](../spreadsheets/01-InterestRates.xlsx)
+
+**What it does**: The Growth sheet compares the different interest types (simple, compound and continuous) showing final balances and growth over 30 years. The effective rate sheet compares compounding frequencies and checks my calculated annual rates against Excel's using the Excel EFFECT function.
+
+**Cells to change**: On the Growth sheet:
+- B3 (Principal): starting amount invested
+
+- B4 (NominalRate): nominal annual interest rate
+
+- B5 (Years): investment length used for the final balance outputs
+
+- B6 (CompFreq): number of compounding periods per year
+
+**What to look at**: You should look to try and change the investment length from 5 to 30 years and have a look at how the gap between simple and compound interest widens. 
+
+After that try changing the compounding frequency from 1 to 12 to 365 for annual, monthly and daily. The compound balance approaches the continuous balance with smaller gains each time. 
+
+On the effective rate sheet the difference from Excel's EFFECT results should remain zero bar from possible rounding.
