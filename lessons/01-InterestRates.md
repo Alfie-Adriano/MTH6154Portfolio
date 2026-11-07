@@ -110,8 +110,6 @@ The rate is:
 
 $r(t) = 0.02$ for $0 \le t \lt 1$, and $r(t) = 0.04$ for $1 \le t \le 2$.
 
-$r(t) = \begin{cases} 0.02, & 0 \le t \lt 1, \\ 0.04, & 1 \le t \le 2. \end{cases}$
-
 First we add the contribution from each year:
 
 $\int_0^2 r(u)\,du = \int_0^1 0.02\,du + \int_1^2 0.04\,du = 0.02(1) + 0.04(1) = 0.06$
