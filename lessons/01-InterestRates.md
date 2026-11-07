@@ -234,7 +234,44 @@ Ergo the investment's 10% IRR accounts for both the size and timing of the payme
 
 ### Exercise 1.x (from Exercise Sheet 1)
 
-Question, then your solution.
+### Exercise 1 (from Exercise Sheet 1)
+
+You put £700 in an account at 3% nominal. How much will you have after 3 years if the interest is compounded (i) annually, (ii) monthly, (iii) semi-annually, (iv) continuously?
+
+**Hint.** Use the formula from the summary 
+
+[Example 1](#example-1-simple-vs-compound).
+
+<details>
+<summary>Show solution</summary>
+
+i)
+Annually $n=1$
+
+$B(3)=700\left(1+\frac{0.03}{1}\right)^{1\times3}=700(1.03)^3=\boxed{£764.91}$.
+
+Interest is added once each year, giving three compounding periods.
+
+ii)
+Monthly $n=12$
+
+$B(3)=700\left(1+\frac{0.03}{12}\right)^{12\times3}=700(1.0025)^{36}=\boxed{£765.84}$.
+
+Interest is added at 0.25% per month over 36 compounding periods.
+
+iii)
+Semi-annually $n=2$
+
+$B(3)=700\left(1+\frac{0.03}{2}\right)^{2\times3}=700(1.015)^6=\boxed{£765.41}$.
+
+Interest is added at 1.5% every six months over six compounding periods.
+
+iv)
+Continuously
+
+$B(3)=700e^{0.03\times3}=700e^{0.09}=\boxed{£765.92}$.
+
+Interest compounds continuously, producing the highest balance of the four methods at the same nominal rate.
 
 ## Spreadsheet
 
