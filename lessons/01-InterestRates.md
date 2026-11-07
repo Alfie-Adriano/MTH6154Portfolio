@@ -108,7 +108,7 @@ So although your money grew by 5%, your purchasing power has grown by only 1.94%
 As our example, A private equity company has placed £2million into an interest bearing account while preparing to acquire a beverage business in two years. The account pays continuously compounded interest at 2% during the first year and 4% during the second year.
 The rate is: 
 
-$r(t) =\begin{cases}0.02, & 0\le t < 1,\\0.04,& 1 \le t\le t2.\end{cases}$
+$r(t) = \begin{cases} 0.02, & 0 \le t < 1, \\ 0.04, & 1 \le t \le 2. \end{cases}$
 
 First we add the contribution from each year:
 
