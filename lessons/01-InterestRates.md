@@ -115,10 +115,13 @@ For an initial outlay followed by positive payments, an IRR above the return ava
 
 ## My example
 
+
 ### Example 1: Simple vs compound
 Let us say £1000 were invested at 3% annually for three years, using simple interest it becomes £1090, compared to £1092.73 with annual compounding interest.
 
 Although the balances are close after 3 years, were we to raise the time to 30 years the gap rises from £2.73 to £527.26, with simple generating £1900 and compounding generating £2427.26.
+
+
 
 ### Example 2: Choosing a savings account
 Let us say we are choosing where to put £800 for one year.
@@ -136,6 +139,8 @@ Calculating for Account B, annual compounding means the effective rate is simply
 
 Meaning that Account A has the lower quoted rate but still produces slightly more growth, hence showing why the effective rate is our better basis for comparison.
 
+
+
 ### Example 3: Continuous compounding
 As an example, let us say that we have £1200 at 4% continuously compounded for two years.
 
@@ -144,6 +149,8 @@ Where $B(2) = 1200\,e^{0.04\times 2} \approx \text{£}1{,}299.94$
 However if we use annual compounding instead we get $B(2) = 1200\,(1.04)^2 = \text{£}1{,}297.92$.
 
 Ergo, we see that continuous compounding will earn us an extra £2.02 thus showing that increasing the compounding frequency will add growth, though the balance will approach a limit.
+
+
 
 ### Example 4: Saving for a model train
 As an example, You set aside £600 for a model train, earning 5% effective annual interest. Over the year model train prices have risen by 3%.
@@ -161,6 +168,8 @@ Here you can still afford it and you have £12 left to spend as you wish.
 Your real interest rate is calculated as $r_{\text{real}} = \frac{1.05}{1.03} - 1 \approx 0.019417 = 1.9417\%$
 
 So although your money grew by 5%, your purchasing power has grown by only 1.94% because rising prices from inflation absorbed part of the growth.
+
+
 
 ### Example 5: A varying rate
 As our example, A private equity company has placed £2million into an interest bearing account while preparing to acquire a beverage business in two years. 
@@ -183,6 +192,7 @@ Meaning the amount available for the acquisition after two years is:
 
 $B(2) = 2{,}000{,}000\,e^{2(0.03)} = 2{,}000{,}000\,e^{0.06} \approx \text{£}2{,}123{,}673.09$
 The company earned £123,673.09 in interest, the same it would have earned with 3% continuously compounded for both years.
+
 
 
 ### Example 6: IRR of an investment
