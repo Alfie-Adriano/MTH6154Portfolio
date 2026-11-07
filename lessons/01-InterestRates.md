@@ -308,21 +308,21 @@ Which company offers the best deal?
 
 Assuming 365 compounding periods per year:
 
-$r_{\text{eff,A}} = \left(1+\frac{0.234}{365}\right)^{365} - 1 \approx 0.263550$, i.e. **26.3550%**$.
+$r_{\text{eff,A}} = \left(1+\frac{0.234}{365}\right)^{365} - 1 \approx 0.263550$, i.e. **26.3550%**.
 
 Daily compounding raises annual borrowing cost above 23.4%.
 
 
 - Company B: 23.5% compounded monthly
 
-$r_{\text{eff,B}} = \left(1+\frac{0.235}{12}\right)^{12} - 1 \approx 0.262039$, i.e. **26.2039%**$.
+$r_{\text{eff,B}} = \left(1+\frac{0.235}{12}\right)^{12} - 1 \approx 0.262039$, i.e. **26.2039%**.
 
 Despite the higher nominal rate, Company B has a slightly lower effective rate than Company A.
 
 
 - Company C: 24.2% compounded annually
 
-$r_{\text{eff,C}} = \left(1+\frac{0.242}{1}\right)^1 - 1 = 0.242$, i.e. **24.2%**$.
+$r_{\text{eff,C}} = \left(1+\frac{0.242}{1}\right)^1 - 1 = 0.242$, i.e. **24.2%**.
 
 With annual compounding the nominal and effective annual rates are equal.
 
