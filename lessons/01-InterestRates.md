@@ -18,7 +18,7 @@
 - $r(t)$: instantaneous interest rate at time t (with continuous compounding)
 - $\bar r(T)$: average of the instantaneous rates from today to time $T$
 - $u$: time variable used inside an integral
-- $C_k$: the $k$th payment (positive if it is received, negative is paid)
+- $C_k$: the $k'th$ payment (positive if it is received, negative is paid)
 - $t_k$: time in years when the kth payment happens
 - $m$: number of future payments
 - $\text{NPV}$: total value today of all the incoming and outgoing payments
@@ -144,7 +144,7 @@ Meaning that Account A has the lower quoted rate but still produces slightly mor
 ### Example 3: Continuous compounding
 As an example, let us say that we have £1200 at 4% continuously compounded for two years.
 
-Where $B(2) = 1200\,e^{0.04\times 2} \approx \text{£}1{,}299.94$
+Where $B(2) = 1200\e^{0.04\times 2} \approx \text{£}1{,}299.94$
 
 However if we use annual compounding instead we get $B(2) = 1200\,(1.04)^2 = \text{£}1{,}297.92$.
 
@@ -241,9 +241,11 @@ You put £700 in an account at 3% nominal. How much will you have after 3 years 
 
 **Hint.** Use the formula from the summary 
 
+[Example 1](#example-1-simple-vs-compound).
+
 </details>
 
-[Example 1](#example-1-simple-vs-compound).
+
 
 <details>
 <summary>Show solution</summary>
