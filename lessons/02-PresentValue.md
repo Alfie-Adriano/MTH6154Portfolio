@@ -1,6 +1,6 @@
 # 2. Present Value
 
-##Summary
+## Summary
 
 ### Notation
 
@@ -159,7 +159,7 @@ For positive payments, the present value is not finite when $r<=0$. When interes
 [See Example 6](#example-6-a-fund-that-pays-forever)
 
 
-##My Examples
+## My Examples
 
 
 ### Example 1: Money today vs later
