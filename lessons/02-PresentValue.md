@@ -178,5 +178,39 @@ Meaning although the grant pays £210,000 total, its actual present value is £1
 
 ### Perpetuities
 
+A perpetuity is a stream of equal payments that is made at regular intervals and continues forever. Although the total paid is technically unlimited, its present value can be finite because each future payment gets discounted more heavily.
+
+For annual payments the first payment in one year is written as:
+
+$\text{PV} = A\beta + A\beta^2 + A\beta^3 + \cdots = A\sum_{k=1}^{\infty} \beta^k$
+
+The symbol infinity means the payments continue without an end date. When r > 0, we have 0 < $beta$ <1 so the geometric sum converges to a finite value:
+
+$\text{PV} = \frac{A\beta}{1-\beta} = \frac{A}{r}$
+
+Payment timing also matters for if the first payment is today we must add the immediate payment:
+
+$\text{PV} = A + \frac{A}{r}$
+
+However if the first payment is at the end of year $t$, we discount the standard perpetuity back another $t-1$ years:
+
+$\text{PV} = \frac{A}{r}(1+r)^{-(t-1)}$
+
+For positive payments, the present value is not finite when $r<=0$. When interest is zero the payments never shrink when discounted and at a negative interest rate their present value grows.
+
+As our example, let us suppose Arsenal football club are establishing a fund through a shareholder initiative to support talented children from low income backgrounds, by helping them access youth football programs and opportunities to be noticed. The fund pays £10,000 at the end of each year forever and earns a constant 3% effective annual return.
+
+To calculate the amount needed today we plug our values into our formula to get:
+
+$\text{PV} = \frac{A}{r} = \frac{10{,}000}{0.03} \approx \text{£}333{,}333.33$
+
+Each year the fund would earn approximately:
+
+$333{,}333.33 \times 0.03 \approx \text{£}10{,}000$
+
+Withdrawing the interest earned funds the programmes whilst leaving the original investment untouched.
+
+Ergo, the fund can support £10,000 annually forever under our assumptions. However that fixed payment's purchasing power will fall if prices rise.
+
 
 [See Example 1](#example-1-your-title)
