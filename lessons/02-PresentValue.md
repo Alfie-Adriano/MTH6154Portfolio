@@ -144,6 +144,37 @@ The positive NPV means the expected receipts exceed initial costs in today's mon
 
 ### Geometric sums and regular payments
 
+A geometric sum is a type of sum that adds terms where each term is the previous one multiplied by the same factor. For a finite sum it is written as:
+
+$\sum_{k=a}^{b} x^k = x^a + x^{a+1} + \cdots + x^b = \frac{x^a - x^{b+1}}{1-x}$, for $x \ne 1$.
+
+In the formula k counts through the exponents from a to b. If x=1, the sum would be the number of terms b-a+1.
+
+Geometric sums occur when equal payments arrive at regular intervals. This is because each payment is discounted by one additional period. For $m$ annual payments of $A$, with the first arriving in a year:
+
+$\text{PV} = A\beta + A\beta^2 + \cdots + A\beta^m$
+
+Now using the geometric sum formula:
+
+$\text{PV} = A \times \frac{\beta(1-\beta^m)}{1-\beta} = A \times \frac{1-(1+r)^{-m}}{r}$, for $r \ne 0$.
+
+This values the entire payment stream into one calculation. If $r=0$ then no discounting is needed and the present value is $mA$.
+
+For our example, suppose the Natural History Museum receives a grant as part of a government backed scheme that pays £42,000 at the end of each year for 5 years. Using an annual discount rate of 4.6%, calculate what the grant is worth today.
+
+First we calculate the yearly discount factor:
+
+$\beta = \frac{1}{1.046}$
+
+Each successive payment is discounted for one additional year, which gives us:
+
+$\text{PV} = 42{,}000 \times \left(\beta + \beta^2 + \beta^3 + \beta^4 + \beta^5\right)$
+
+Since this is a geometric sum we calculate the total directly as:
+
+$\text{PV} = 42{,}000 \times \frac{1-(1.046)^{-5}}{0.046} \approx \text{£}183{,}866.35$
+
+Meaning although the grant pays £210,000 total, its actual present value is £183,866.35 because the museum is receiving money gradually rather than in a one time payment today.
 
 ### Perpetuities
 
