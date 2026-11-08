@@ -326,3 +326,44 @@ Company B offers the better deal under continuous compounding.
 
 </details>
 
+
+### Exercise 3
+
+**Question** A car loan worth £12,000 is repaid through 36 equal monthly instalments that start one month after borrowing. What is the monthly payment when the nominal annual interest rate is 6%, compounded monthly.
+
+
+<details>
+<summary>Show hint</summary>
+
+The present value of the 36 repayments must equal the £12,000 borrowed. Use the monthly interest rate $\frac{0.06}{12}$ and then apply the geometric sum formula to the discounted payments.
+
+</details>
+
+
+<details>
+<summary>Show solution</summary>
+
+First we find the monthly rate
+
+$\frac{r}{12} = \frac{0.06}{12} = 0.005$
+
+The monthly interest rate comes out to be $0.5%$ which gives a monthly discount factor of $\frac{1}{1.005}$
+
+Then we equate the loan to the present value of the repayments
+Where each monthly instalment is $A$. Since the first payment is one month away:
+
+$12{,}000 = \frac{A}{1.005} + \frac{A}{(1.005)^2} + \cdots + \frac{A}{(1.005)^{36}}$
+
+The first payment is discounted for one month and the final for 36 months.
+
+Finally we apply the geometric sum formula
+
+$12{,}000 = A \times \frac{1-(1.005)^{-36}}{0.005}$
+
+Rearrange to find monthly instalment:
+
+$A = \frac{12{,}000 \times 0.005}{1-(1.005)^{-36}} \approx \text{£}365.06$
+
+**Conclusion** The monthly instalment is approximately £365.06. A small adjustment to the final payment might be needed as instalments are typically rounded to the nearest penny.
+
+</details>
