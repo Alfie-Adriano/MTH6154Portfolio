@@ -1,3 +1,5 @@
+##Summary
+
 ### Notation
 
 - $P$: Amount of money paid or received at a future time. 
@@ -46,11 +48,8 @@ After one year
 
 To compare money received at different times fairly we must express the amounts at the same date.
 
-For example, A model train business can receive £500 today or £500 in one year. If it takes the money today and deposits in to an account paying 4% annual interest, after a year it will have:
+[See Example 1](#example-1-money-today-vs-later)
 
-$500(1.04)=£520$
-
-Taking £500 today leaves the business £20 better off after a year hence showing why equal amounts paid at different times do not have equal value.
 
 ### Present value and the discount factor
 
@@ -66,17 +65,8 @@ $D(t) = \frac{1}{(1+r)^t}$, so $\text{PV} = \frac{P}{(1+r)^t}$.
 
 Dividing by growth factor reverses the interest accumulation. When interest rates are positive, the discount factor is still below 1 meaning a future payment is worth less today.
 
-For example, A machine learning company expects to spend £1,500,500 on new chips for its data centres in two years. If set aside today it can earn 5% interest compounded annually. How much does it need to deposit?
+[See Example 2](#example-2-setting-money-aside-for-a-purchase)
 
-First we would calculate the discount factor:
-
-$D(2) = \frac{1}{(1.05)^2} \approx 0.907029$
-
-This means that each £1 needed in two years is worth roughly £0.907 today. The present value of the chip purchase would be:
-
-$\text{PV} = 1{,}500{,}500 \times D(2) = \frac{1{,}500{,}500}{(1.05)^2} \approx \text{£}1{,}360{,}997.73$
-
-The company needs to set aside £1,360,997,73 today, allowing the interest earned over two years to cover the expected amount of £1,500,500 for chip purchases.
 
 ### Ways of quoting the rate
 
@@ -102,22 +92,8 @@ Since money grows by $e^{rt}$ multiplying by $e^{-rt}$ reverses that growth.
 
 For the same positive quoted annual rate, the more regular the compounding, the greater the growth, so a smaller deposit today is needed to reach the desired fixed future amount.
 
-Let us for this example use a more complex accurate scenario.
-A defence company must pay £25,000,000 for materials in three years. It compares accounts quoting an annual rate of 6.7% with different compounding methods in order to determine how much it needs to set aside today.
+[See Example 3](#example-3-same-rate-different-compounding)
 
-With yearly compounding the company would need to set aside:
-
-$\text{PV} = \frac{25{,}000{,}000}{(1.067)^3} \approx \text{£}20{,}580{,}065.39$
-
-Using monthly compounding, the rate per month would be $\frac{0.067}{12}$ applied over $12x3=36$ periods:
-
-$\text{PV} = 25{,}000{,}000 \times \left(1+\frac{0.067}{12}\right)^{-36} \approx \text{£}20{,}459{,}245.23$
-
-Using continuous:
-
-$\text{PV} = 25{,}000{,}000 \times e^{-0.067 \times 3} \approx \text{£}20{,}447{,}810.79$
-
-Ergo, the company needs to set aside less when compounding is more frequent. Which also shows that the same quoted annual rate can give different present values depending on how interest is compounded.
 
 ### Net present value (NPV)
 
@@ -131,15 +107,7 @@ $\text{NPV} = \sum_{k=1}^{m} \frac{C_k}{(1+r)^{t_k}}$
 
 A payment made today has a discount factor of 1. For an investment a positive NPV simply means that the future receipts are worth more today than the costs. Negative means the inverse.
 
-For example, a derivatives trading firm takes bullish positions on US crude oil, meaning it expects to benefit from rising oil prices. The trades require $£550,000$ today and are expected to produce net cash receipts of $£370,000$ at the end of each of the next two years, including any recovery of the initial investment. The firm uses an annual discount rate of $4%$.
-
-The initial outlay is already at today's value, whilst the expected future receipts must be discounted:
-
-$\text{NPV} = -550{,}000 + \frac{370{,}000}{1.04} + \frac{370{,}000}{(1.04)^2}$
-
-$\text{NPV} \approx -550{,}000 + 355{,}769.23 + 342{,}085.80 = \text{£}147{,}855.03$
-
-The positive NPV means the expected receipts exceed initial costs in today's money at the chosen 4% discount rate, although the trading returns remain uncertain.
+[See Example 4](#example-4-npv-of-an-investment)
 
 
 ### Geometric sums and regular payments
@@ -160,21 +128,8 @@ $\text{PV} = A \times \frac{\beta(1-\beta^m)}{1-\beta} = A \times \frac{1-(1+r)^
 
 This values the entire payment stream into one calculation. If $r=0$ then no discounting is needed and the present value is $mA$.
 
-For our example, suppose the Natural History Museum receives a grant as part of a government backed scheme that pays £42,000 at the end of each year for 5 years. Using an annual discount rate of 4.6%, calculate what the grant is worth today.
+[See Example 5](#example-5-value-of-a-grant)
 
-First we calculate the yearly discount factor:
-
-$\beta = \frac{1}{1.046}$
-
-Each successive payment is discounted for one additional year, which gives us:
-
-$\text{PV} = 42{,}000 \times \left(\beta + \beta^2 + \beta^3 + \beta^4 + \beta^5\right)$
-
-Since this is a geometric sum we calculate the total directly as:
-
-$\text{PV} = 42{,}000 \times \frac{1-(1.046)^{-5}}{0.046} \approx \text{£}183{,}866.35$
-
-Meaning although the grant pays £210,000 total, its actual present value is £183,866.35 because the museum is receiving money gradually rather than in a one time payment today.
 
 ### Perpetuities
 
@@ -198,6 +153,90 @@ $\text{PV} = \frac{A}{r}(1+r)^{-(t-1)}$
 
 For positive payments, the present value is not finite when $r<=0$. When interest is zero the payments never shrink when discounted and at a negative interest rate their present value grows.
 
+[See Example 6](#example-6-a-fund-that-pays-forever)
+
+
+##My Examples
+
+
+### Example 1: Money today vs later
+
+For example, A model train business can receive £500 today or £500 in one year. If it takes the money today and deposits in to an account paying 4% annual interest, after a year it will have:
+
+$500(1.04)=£520$
+
+Taking £500 today leaves the business £20 better off after a year hence showing why equal amounts paid at different times do not have equal value.
+
+
+### Example 2: Setting money aside for a purchase
+
+For example, A machine learning company expects to spend £1,500,500 on new chips for its data centres in two years. If set aside today it can earn 5% interest compounded annually. How much does it need to deposit?
+
+First we would calculate the discount factor:
+
+$D(2) = \frac{1}{(1.05)^2} \approx 0.907029$
+
+This means that each £1 needed in two years is worth roughly £0.907 today. The present value of the chip purchase would be:
+
+$\text{PV} = 1{,}500{,}500 \times D(2) = \frac{1{,}500{,}500}{(1.05)^2} \approx \text{£}1{,}360{,}997.73$
+
+The company needs to set aside £1,360,997,73 today, allowing the interest earned over two years to cover the expected amount of £1,500,500 for chip purchases.
+
+
+### Example 3: Same rate, different compounding
+
+Let us for this example use a more complex accurate scenario.
+A defence company must pay £25,000,000 for materials in three years. It compares accounts quoting an annual rate of 6.7% with different compounding methods in order to determine how much it needs to set aside today.
+
+With yearly compounding the company would need to set aside:
+
+$\text{PV} = \frac{25{,}000{,}000}{(1.067)^3} \approx \text{£}20{,}580{,}065.39$
+
+Using monthly compounding, the rate per month would be $\frac{0.067}{12}$ applied over $12x3=36$ periods:
+
+$\text{PV} = 25{,}000{,}000 \times \left(1+\frac{0.067}{12}\right)^{-36} \approx \text{£}20{,}459{,}245.23$
+
+Using continuous:
+
+$\text{PV} = 25{,}000{,}000 \times e^{-0.067 \times 3} \approx \text{£}20{,}447{,}810.79$
+
+Ergo, the company needs to set aside less when compounding is more frequent. Which also shows that the same quoted annual rate can give different present values depending on how interest is compounded.
+
+
+### Example 4: NPV of an investment
+
+For example, a derivatives trading firm takes bullish positions on US crude oil, meaning it expects to benefit from rising oil prices. The trades require $£550,000$ today and are expected to produce net cash receipts of $£370,000$ at the end of each of the next two years, including any recovery of the initial investment. The firm uses an annual discount rate of $4%$.
+
+The initial outlay is already at today's value, whilst the expected future receipts must be discounted:
+
+$\text{NPV} = -550{,}000 + \frac{370{,}000}{1.04} + \frac{370{,}000}{(1.04)^2}$
+
+$\text{NPV} \approx -550{,}000 + 355{,}769.23 + 342{,}085.80 = \text{£}147{,}855.03$
+
+The positive NPV means the expected receipts exceed initial costs in today's money at the chosen 4% discount rate, although the trading returns remain uncertain.
+
+
+### Example 5: Value of a grant
+
+For our example, suppose the Natural History Museum receives a grant as part of a government backed scheme that pays £42,000 at the end of each year for 5 years. Using an annual discount rate of 4.6%, calculate what the grant is worth today.
+
+First we calculate the yearly discount factor:
+
+$\beta = \frac{1}{1.046}$
+
+Each successive payment is discounted for one additional year, which gives us:
+
+$\text{PV} = 42{,}000 \times \left(\beta + \beta^2 + \beta^3 + \beta^4 + \beta^5\right)$
+
+Since this is a geometric sum we calculate the total directly as:
+
+$\text{PV} = 42{,}000 \times \frac{1-(1.046)^{-5}}{0.046} \approx \text{£}183{,}866.35$
+
+Meaning although the grant pays £210,000 total, its actual present value is £183,866.35 because the museum is receiving money gradually rather than in a one time payment today.
+
+
+### Example 6: A fund that pays forever
+
 As our example, let us suppose Arsenal football club are establishing a fund through a shareholder initiative to support talented children from low income backgrounds, by helping them access youth football programs and opportunities to be noticed. The fund pays £10,000 at the end of each year forever and earns a constant 3% effective annual return.
 
 To calculate the amount needed today we plug our values into our formula to get:
@@ -212,5 +251,3 @@ Withdrawing the interest earned funds the programmes whilst leaving the original
 
 Ergo, the fund can support £10,000 annually forever under our assumptions. However that fixed payment's purchasing power will fall if prices rise.
 
-
-[See Example 1](#example-1-your-title)
