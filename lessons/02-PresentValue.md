@@ -367,3 +367,51 @@ $A = \frac{12{,}000 \times 0.005}{1-(1.005)^{-36}} \approx \text{£}365.06$
 **Conclusion** The monthly instalment is approximately £365.06. A small adjustment to the final payment might be needed as instalments are typically rounded to the nearest penny.
 
 </details>
+
+
+## Spreadsheet
+
+
+### Sheet 1: NPV and IRR
+
+**What it does** This sheet calculates the present value of a project's cash flows and find its IRR (the discount rate at which the NPV equals 0)
+
+**Inputs** The shaded cells contain the discount rate in B3 (called Discountrate), and the cash flows from B6:B11. My project requires £8000 today and generates annual receipts of £10,000, £6900, £12,000, £13,000 and £37,000 over five years. 
+The initial discount rate is 6%
+
+
+**How it works** 
+
+- The discount factor column uses =1/(1+DiscountRate)^A6 that is adjusted for each row to calculate what £1 received in that year would be worth today
+
+- The present value column multiplies each cash flow by its discount factor using =B6*C6. Cell B13 then adds these values with =SUM(D6:D11) to find NPV
+
+- Cell B14 check this using =B6+NPV(Discountrate,B7:B11). Excel's own NPV then assumes its first cash flow arrives after one period, so the year zero payment is added separately. Both mine and excel's calculations agreed.
+
+- Cell B15 uses =IRR(B6:B11) to find the project’s IRR. Setting Discountrate equal to this cell makes NPV approximately zero.
+
+- The table and scatter chart show NPV at discount rates from 0% to 130%. NPV falls as the rate rises crossing zero between 120% and 130%.
+
+
+**Result** At a 6% discount rate, NPV is £55,596.14 and the IRR is approximately 125.14%. The positive NPV means the projected receipts exceed the initial investment in today's money at the chosen discount rate. (Depends on the assumed case flows being achieved)
+
+
+### Sheet 2: Loan schedule
+
+**What it does** This sheet shows a loan being followed through equal monthly repayments. Hence showing how each payment covers interest and reduces the outstanding balance.
+
+
+**Inputs** The shaded inputs are Loanamount = £45,695, Loanrate = 6.8% nominal annually and compounded monthly and Loanmonths = 72.
+
+
+**How it works**
+
+- Cell B7 calculates the monthly payment using =PMT(Loanrate/12,Loanmonths,-Loanamount). This rearranges the payment present value formula so that the discounted repayments equal the amount borrowed. (The negative loan amount makes Excel return a positive payment)
+
+- Each row starts with the opening balance. Monthly interest is the opening balance and is multiplied by LoanRate/12, principal repaid is the payment minus interest and the closing balance is the opening balance minus principal repaid.
+
+- This is my annuity calculation done through =LoanAmount*(LoanRate/12)/(1-(1+LoanRate/12)^-LoanMonths) which matches PMT. A separate check confirms that total payments minus the original loan equals the total interest.
+
+- The chart shows the outstanding balance falling towards zero. As the balance falls less interest is charged and more of each equal payment repays principal.
+
+**Result** The monthly payment displays as £774.67 with total payments of £55,776.48 and a total interest of £10,081.48. These totals use Excel's unrounded payment internally by rounding every actual payment to pennies would require a small adjustment for the final payment.
