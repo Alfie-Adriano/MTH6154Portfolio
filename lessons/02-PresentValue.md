@@ -1,8 +1,7 @@
 # 2. Present Value
 
-## Summary
 
-### Notation
+## Notation
 
 - $P$: Amount of money paid or received at a future time. 
 
@@ -37,6 +36,9 @@
 - $\sum\$: “Sum of”: add together the specified terms. 
 
 - $e$: Euler’s number, approximately $2.71828$, used in continuous compounding. 
+
+
+## Summary
 
 
 ### Time value of money

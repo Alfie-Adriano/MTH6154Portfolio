@@ -2,27 +2,45 @@
 
 [Back to contents](../README.md)
 
-## Summary
-
-### Notation
+## Notation
 - $P$: original principal
+
 - $n$: number of times per year interest is added
+
 - $B(t)$: balance after t years
+
 - $t$: time, (measured in years)
+
 - $T$: total investment period/maturity, (measured in years)
+
 - $r$: annual interest rate as a decimal
+
 - $r_{\text{eff}}$: effective annual interest rate (includes compounding effect)
+
 - $e$: Euler's number
+
 - $i$: annual inflation rate as a decimal
+
 - $r_{\text{real}}$: annual interest rate after adjusting for inflation
+
 - $r(t)$: instantaneous interest rate at time t (with continuous compounding)
+
 - $\bar r(T)$: average of the instantaneous rates from today to time $T$
+
 - $u$: time variable used inside an integral
+
 - $C_k$: the $k'th$ payment (positive if it is received, negative is paid)
+
 - $t_k$: time in years when the kth payment happens
+
 - $m$: number of future payments
+
 - $\text{NPV}$: total value today of all the incoming and outgoing payments
+
 - $r_{\text{IRR}}$: the interest rate that makes NPV equal to zero  
+
+
+## Summary
 
 
 ### Simple vs compound interest
