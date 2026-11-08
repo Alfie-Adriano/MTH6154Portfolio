@@ -256,3 +256,73 @@ Withdrawing the interest earned funds the programmes whilst leaving the original
 
 Ergo, the fund can support £10,000 annually forever under our assumptions. However that fixed payment's purchasing power will fall if prices rise.
 
+
+## Solved Exercises
+
+
+### Exercise 2
+
+**Question.** Compare the following two three year job offers.
+
+- Company A offers: £65,000 after year 1, £75,000 after year 2 and £115,000 after year 3.
+
+- Company B offers: £15,000 immediate payment followed by £79,000 at the end of each year.
+
+Compare their present values at an annual interest rate of 3.75%, using annual and continuous compounding.
+
+<details>
+<summary>Show hint</summary>
+
+Bring every payment back to today's value before adding them together. Company B's signing bonus is already paid today so its discount factor is 1.
+
+</details>
+
+<details>
+<summary>Show solution</summary>
+
+**Annual compounding**
+
+Use the discount factor:
+
+$D(t) = \frac{1}{(1+r)^t}$.
+
+Company A's offer has present value:
+
+$\text{PV}_A = \frac{65{,}000}{1.0375} + \frac{75{,}000}{(1.0375)^2} + \frac{115{,}000}{(1.0375)^3} \approx \text{£}235{,}302.31$.
+
+The subscripts $A$ and $B$ identify the company being valued.
+
+Company B's signing bonus needs no discounting, so:
+
+$\text{PV}_B = 15{,}000 + \frac{79{,}000}{1.0375} + \frac{79{,}000}{(1.0375)^2} + \frac{79{,}000}{(1.0375)^3} \approx \text{£}235{,}276.57$.
+
+Subtracting the unrounded values:
+
+$\text{PV}_A - \text{PV}_B \approx \text{£}25.74$.
+
+Company A offers the better deal under annual compounding.
+
+**Continuous compounding**
+
+Use the discount factor:
+
+$D(t) = e^{-rt}$.
+
+Company A's offer has present value:
+
+$\text{PV}_A = 65{,}000 \times e^{-0.0375} + 75{,}000 \times e^{-0.0375 \times 2} + 115{,}000 \times e^{-0.0375 \times 3} \approx \text{£}234{,}952.09$.
+
+Company B's offer has present value:
+
+$\text{PV}_B = 15{,}000 + 79{,}000 \times e^{-0.0375} + 79{,}000 \times e^{-0.0375 \times 2} + 79{,}000 \times e^{-0.0375 \times 3} \approx \text{£}234{,}978.28$.
+
+Subtracting the unrounded values:
+
+$\text{PV}_B - \text{PV}_A \approx \text{£}26.19$.
+
+Company B offers the better deal under continuous compounding.
+
+**Conclusion.** Company A wins annual compounding, while Company B wins continuous compounding. With the same quoted positive rate, continuous compounding discounts later payments more heavily, reducing the relative value of Company A's higher final year salary.
+
+</details>
+
