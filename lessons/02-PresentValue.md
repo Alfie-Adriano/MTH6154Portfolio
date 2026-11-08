@@ -1,3 +1,5 @@
+# 2. Present Value
+
 ##Summary
 
 ### Notation
@@ -35,6 +37,7 @@
 - $\sum\$: “Sum of”: add together the specified terms. 
 
 - $e$: Euler’s number, approximately $2.71828$, used in continuous compounding. 
+
 
 ### Time value of money
 

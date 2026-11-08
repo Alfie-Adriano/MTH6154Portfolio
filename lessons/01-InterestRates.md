@@ -62,6 +62,7 @@ For our positive nominal rates, continuous compounding will give the highest eff
 
 [See Example 3](#example-3-continuous-compounding)
 
+
 ### Real vs nominal (inflation)
 The nominal interest rate tells you how your money will grow before we account for rising prices. The real interest rate tells you how your purchasing power changes, showing how much your money can actually buy you, whether it be more or less than before.
 
@@ -97,6 +98,7 @@ The difference here is that $r(t)$ describes the rate at as singular moment whil
 
 [See Example 5](#example-5-a-varying-rate)
 
+
 ### IRR
 The internal rate of return or IRR for short is the annual discount rate that makes an investment's NPV become equal to 0. Meaning it makes the value today of future payments equal to the initial/first investment.
 
@@ -112,6 +114,7 @@ The symbol $\sum_{k=1}^{m}$ means add up all the future payments from payment 1 
 For an initial outlay followed by positive payments, an IRR above the return available on a comparable investment indicates a better return so long as the risks are also comparable.
 
 [See Example 6](#example-6-irr-of-an-investment)
+
 
 ## My example
 
