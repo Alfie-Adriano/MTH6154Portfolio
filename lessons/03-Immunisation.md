@@ -70,6 +70,17 @@ $\nu=\frac{\tau}{1+r}=\beta\tau$
 
 ### Convexity
 
+Convexity is how much our present value curve bends in comparison to its value, it is written as:
+
+$c=\frac{V''(r)}{V(r)}$
+
+In order to help us understand let us use an analogy. Imagine you are in Wales and you are driving on a sloping road, a sign says the road is steep at 9% you are halfway up but you do not know if you have reached its maximum steepness of 9% yet and are nervous. Our effective duration would tell us how steep the road is where you stand right now. Convexity however would tell us how the slope is changing as we move. Convexity gives a better estimate of present value after rate change when added. It is written as:
+
+$V(r_0+\varepsilon)\approx V(r_0)\left(1-\nu\varepsilon+\frac12 c\varepsilon^2\right)$
+
+Where $\var$ and $c$ are calculated at starting rate $r_0$.
+
+For a stream of positive payments the convexity will add an upward correction as to whether the rate is rising or falling because $\epsilon^2$ is positive in either case. Hence we can see that duration alone is overestimating the loss when rates rise and that it is underestimating the gain when rates fall.
 
 
 ### Redington immunisation
@@ -144,7 +155,28 @@ $\nu=-\frac{V'(r)}{V(r)}=\tau\approx 2.65$ years
 With annual compounding the duration also rounded to 2.65 years however the effective did not being 2.45 years due to $\nu=\tau/1.08$. Continuous compounding however gives the two measures as equal at 2.65 years.
 
 
-### Example 4:
+### Example 4: Valuing Leander's licence fee
+
+Leander Rowing Club have just started producing their own wine and champagne, the club owes £10,000 in licensing fees for the alcohol as part of their new deal with British Airways. At a continuously compounded rate of 4% what is the amount needed to set aside today?
+
+Let us calculate it using our formula:
+
+$V(0.04)=10{,}000e^{-0.04(5)}\approx \text{£}8{,}187.31$
+
+As $V(r)=10{,}000e^{-5r}$ if we differentiate once we get $V'(r)=-5V(r)$, and if we do it twice we get $V''(r)=25V(r)$. So the effective duration is $\nu=5$ and the convexity is $c=25$.
+
+If our rate increases from 4 to 6% then our epsilon gives 0.02. Now using effective duration alone we get:
+
+$V(0.06)\approx V(0.04)\left(1-5(0.02)\right)\approx \text{£}7{,}368.58$
+
+Now if we add convexity we get the following:
+
+$V(0.06)\approx V(0.04)\left(1-5(0.02)+\frac12(25)(0.02)^2\right)\approx \text{£}7{,}409.51$
+
+The amount Leander would need is $10{,}000e^{-0.06(5)}\approx \text{£}7{,}408.18$. Introducing the convexity term in reduces the estimation error down from £39.61 to the much smaller £1.33.
+
+
+### Exercise 5:
 
 
 ## Solved exercises
