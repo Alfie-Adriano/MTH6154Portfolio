@@ -262,21 +262,80 @@ The reserve now has met all Redington conditions for small changes in the shared
 
 ### Exercise 3
 
-**Question:** 
+**Question:** A pension fund owes £20 million in 10 years and £40 million in 15 years. Its assets are 25 year zero coupon bonds that will pay £P million at maturity and £Q million held in the bank. The interest rate is 7%, compounded continuously.
+
+- a) Find P and Q so the fund achieves first order immunisation
+
+- b) Compare the asset and liability convexities to see whether the fund also achieves Redington immunisation.
+
+- c) Explain why replacing the 25 year bonds with 5 year bonds makes first order immunisation impossible.
+
 
 <details>
 <summary>Show hint</summary>
 
-
+First order immunisation requires the assets and liabilities to have the same present value and duration. Use $e^{-0.07t}$ to discount each payment.
 
 </details>
+
 
 <details>
-<summary>Show solution</summary>
+<summary>Show part a</summary>
 
+First, discount the two liabilities:
 
+$V_L(0.07)=20e^{-0.07(10)}+40e^{-0.07(15)} \approx 9.9317+13.9975=23.9292.$
+
+The liability duration is the average of the two payment times weighted by their present values:
+
+$\tau_L= \frac{10(20e^{-0.70})+15(40e^{-1.05})} {20e^{-0.70}+40e^{-1.05}} \approx 12.9248\text{ years}.$
+
+The assets have present value $Pe^{-1.75}+Q$. The bonds are discounted over 25 years while the bank balance is already at today’s value. Matching present values gives:
+
+$Pe^{-1.75}+Q\approx 23.9292.$
+
+Under continuous compounding duration equals effective duration so matching durations is enough for the second condition. The bonds contribute 25 years to weighted average and the bank balance contributes zero:
+
+$\tau_A=\frac{25Pe^{-1.75}+0(Q)}{Pe^{-1.75}+Q}.$
+
+Since the denominator already matches the liabilities’ present value we match the two duration numerators:
+
+$25Pe^{-1.75}=10(20e^{-0.70})+15(40e^{-1.05}).$
+
+Solving gives:
+
+$Pe^{-1.75}\approx 12.3712,$
+
+$P\approx 71.1913,$
+
+$Q=V_L(0.07)-Pe^{-1.75}\approx 11.5580.$
+
+So the fund needs bonds that pay £71.19 million at maturity, worth about £12.37 million today, and £11.56 million in the bank.
 
 </details>
+
+
+<details>
+<summary>Show part b</summary>
+
+With continuous compounding convexity as the present value weighted average of the squared payment times. Using our values from part (a):
+
+$c_A=\frac{25^2Pe^{-1.75}+0^2Q}{Pe^{-1.75}+Q} \approx 323.12,$
+
+$c_L= \frac{10^2(20e^{-0.70})+15^2(40e^{-1.05})} {20e^{-0.70}+40e^{-1.05}} \approx 173.12.$
+
+Since $c_A>c_L$ the fund meets the third condition and achieves Redington immunisation. At 7% the assets exactly cover the liabilities in present value terms. A sufficiently small rate rise or fall makes a present value surplus.
+
+</details>
+
+
+<details>
+<summary>Show part c</summary>
+
+The bank balance has duration zero and a 5 year zero coupon bond has duration five years. Any portfolio made up of positive holdings in these two assets has a duration between 0 & 5 years. The liability duration is about 12.92 years so the fund can match present values but cannot match durations. Which rules out first order immunisation.
+
+</details>
+
 
 ### Exercise 7
 
