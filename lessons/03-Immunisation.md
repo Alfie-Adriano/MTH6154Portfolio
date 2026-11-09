@@ -192,7 +192,7 @@ $V(0.06)\approx V(0.04)\left(1-5(0.02)+\frac12(25)(0.02)^2\right)\approx \text{�
 The amount Leander would need is $10{,}000e^{-0.06(5)}\approx \text{£}7{,}408.18$. Introducing the convexity term in reduces the estimation error down from £39.61 to the much smaller £1.33.
 
 
-### Exercise 5: Immunisation of Hounslow renovation costs.
+### Example 5: Immunisation of Hounslow renovation costs.
 
 Hounslow council currently owe £59,300 in two years for the Thames Path to be renovated in Chiswick. A government scheme for all UK councils to maintain roads and paths will pay Hounslow two grants, one in a year the other in three. The current interest rate is 10% compounded annually, how large should the grants be to achieve Redington immunisation?
 
@@ -220,6 +220,27 @@ Finally we compare convexities, with annual compounding we get a payment contrib
 $c_A=\frac{\frac12(1)(2)+\frac12(3)(4)}{(1.10)^2}\approx 5.79$, $c_L=\frac{(2)(3)}{(1.10)^2}\approx 4.96$
 
 And we can conclude that the grants meet all three Redington conditions. They cover the bill in present value terms at 10%, greater convexity gives the council a small surplus if the rate moves slightly in either direction as well.
+
+
+## Example 6: Building UK infrastructure reserve through foreign bonds
+
+Using a potential scenario, imagine the UK is currently fearing sabotage from other states resulting in the British market being unsettled. The government responds by setting up a reserve to fund £138.915. million of infrastructure security upgrades that will be due in three years time. The government can buy one year and four year zero coupon bonds issued by foreign governments and payable in sterling. Assume the same annual discount rate of 5% applies to the bonds and the future bill. 
+
+Does the reserve meet the three Redington immunisation conditions? And what does this tell us about whether the reserve will cover the bill in present value terms if the discount rate rises or falls?
+
+Calculate the bill's present value as:
+
+$V_L(0.05)=\frac{138.915}{(1.05)^3}=\text{£}120$ million.
+
+The government decides to invest £40 million in one year bonds and £80 million in four year bonds. Calculating the maturities bracket for the three year liability duration as:
+
+$V_A(0.05)=\text{£}120$ million, $\tau_A=\frac{1(40)+4(80)}{120}=3$ years.
+
+Our present value and duration both match meaning the reserve achieves first order immunisation. Convexity is also higher than the bills, hence:
+
+$c_A=\frac{\frac13(1)(2)+\frac23(4)(5)}{(1.05)^2}=\frac{14}{(1.05)^2}$, $c_L=\frac{3(4)}{(1.05)^2}=\frac{12}{(1.05)^2}$
+
+The reserve now has met all Redington conditions for small changes in the shared discount rate. As for immunisation in practice, the foreign bonds' yield could move independently of the rate used to value the UK bill which would leave the reserve exposed to that difference.
 
 
 ## Solved exercises
