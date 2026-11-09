@@ -4,6 +4,27 @@
 
 ## Notation
 
+- $r$: nominal interest rate, $n$: compounding periods per year
+
+- $C_i$: the payment at time $t_i$, for $i=1,\dots,m$
+
+- $D(t;r)$: discount factor for time $t$ at rate $r$. This is $e^{-rt}$ for continuous compounding, or $(1+r/n)^{-nt}$ when compounded $n$ times a year.
+
+- $V(r)=\sum_{i=1}^m C_i D(t_i;r)$: present value of a stream
+
+- $V_A(r)$, $V_L(r)$: present value of the assets and of the liabilities
+
+- $\nu=-V'(r)/V(r)$: effective duration, measured in years
+
+- $\tau=\sum t_iC_iD(t_i)/V(r)$: duration, the present-value-weighted average of the payment times
+
+- $c=V''(r)/V(r)$: convexity
+
+- $\nu_A,\nu_L$ and $c_A,c_L$: effective durations and convexities of the assets and liabilities
+
+- $\beta=1/(1+r)$: yearly discount factor
+
+- $r_0$: the current rate, and $\varepsilon$: a small change in the rate
 
 ## Summary
 
