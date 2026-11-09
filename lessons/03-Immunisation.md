@@ -103,7 +103,9 @@ As $\epsilon^2$ is positive for a rate rise or fall the greater asset convexity 
 
 ### Immunisation in practice
 
+Zero coupon bonds pay once, because of this its duration equals its maturity. A portfolio's duration however is the average of its bond maturities, weighted by their present values.
 
+In order to match the liability duration with positive holding in two bonds we choose one that will mature before the desired duration and one after it. This is called bracketing. We match both present value and duration for first order immunisation and then check that asset's convexity is at least as large as the liability convexity for Redington immunisation.
 
 ## My example
 
