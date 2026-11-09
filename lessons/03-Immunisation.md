@@ -85,7 +85,21 @@ For a stream of positive payments the convexity will add an upward correction as
 
 ### Redington immunisation
 
+Remington immunisation means that we want to choose assets so that they cover our liabilities with respect to the current interest rate whilst the funding position is also protected against small rate fluctuations. Our net position is $V_A(r)-V_L(r)$ where $V_L(r)$ is our present value of the amount(/s) owed (expressed as a positive number).
 
+We do it step by step, starting with step one.
+
+- First we match present values (zero order). So set $V_A(r_0)=V_L(r_0)$. The assets exactly cover the liabilities at current rate.
+
+- Second we match effective durations (first order). So we set $\nu_A=\nu_L$ and since the present values already match, the equal effective durations mean the two values will initially rise or fall by the same amount when the rate changes.
+
+- Finally we check convexity where it requires the condition $c_A\ge c_L$. With the starting values and slopes now matched, convexity can determine how the two curves begin to separate.
+
+If we put all three steps together it will give the equation:
+
+$V_A(r_0+\varepsilon)-V_L(r_0+\varepsilon)\approx \frac12 V_A(r_0)(c_A-c_L)\varepsilon^2$
+
+As $\epsilon^2$ is positive for a rate rise or fall the greater asset convexity will give a surplus for any sufficiently small moves for any direction. However if the convexities are equal then the second order effect will be zero and any higher order terms will determine whether a surplus will appear or a shortfall.
 
 ### Immunisation in practice
 
