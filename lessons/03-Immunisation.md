@@ -190,7 +190,34 @@ $V(0.06)\approx V(0.04)\left(1-5(0.02)+\frac12(25)(0.02)^2\right)\approx \text{�
 The amount Leander would need is $10{,}000e^{-0.06(5)}\approx \text{£}7{,}408.18$. Introducing the convexity term in reduces the estimation error down from £39.61 to the much smaller £1.33.
 
 
-### Exercise 5:
+### Exercise 5: Immunisation of Hounslow renovation costs.
+
+Hounslow council currently owe £59,300 in two years for the Thames Path to be renovated in Chiswick. A government scheme for all UK councils to maintain roads and paths will pay Hounslow two grants, one in a year the other in three. The current interest rate is 10% compounded annually, how large should the grants be to achieve Redington immunisation?
+
+First we match present values to find the bill:
+
+$V_L(0.10)=\frac{59{,}300}{(1.10)^2}\approx \text{£}49{,}008.26$
+
+Then we give each grant half of that present value (£24,504.13). To find the grant amounts we grow that share forwards to each payment date, calculating as:
+
+$\text{Year 1 grant}=\frac{59{,}300}{2(1.10)}\approx \text{£}26{,}954.55$
+
+$\text{Year 3 grant}=\frac{59{,}300(1.10)}{2}=\text{£}32{,}615$
+
+Using our amounts the grants combined present value matches the bill.
+
+Secondly we match our effective durations.
+Our grants have equal present values meaning their payment times also carry equal weight:
+
+$\tau_A=\frac{1+3}{2}=2$ years, $\tau_L=2$ years.
+
+Using annual compounding both the effective durations are equal to $\frac{2}{1.10}$. The grant and liability values therefore have the same slope as each other at the current rate.
+
+Finally we compare convexities, with annual compounding we get a payment contribution from each of $t_i(t_i+1)/(1+r)^2$ which is weighted by its share of present value. Then with the grants having a weight of $1/2$ and the bill a weight of 1 we calculate:
+
+$c_A=\frac{\frac12(1)(2)+\frac12(3)(4)}{(1.10)^2}\approx 5.79$, $c_L=\frac{(2)(3)}{(1.10)^2}\approx 4.96$
+
+And we can conclude that the grants meet all three Redington conditions. They cover the bill in present value terms at 10%, greater convexity gives the council a small surplus if the rate moves slightly in either direction as well.
 
 
 ## Solved exercises
