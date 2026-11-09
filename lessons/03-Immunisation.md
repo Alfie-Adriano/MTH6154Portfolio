@@ -61,6 +61,11 @@ In short, duration describes when the value is received, effective duration is h
 
 ### How duration and effective duration are related
 
+With continuous compounding we have $\nu=\tau$. When we differentiate the discount factor $e^{-rt_i}$ brings down a factor of $-t_i$ so $-V'(r)/V(r)$ giving us the same weighted average as duration.
+
+Using annual compounding our differentiation introduces an additional factor being $1/(1+r)$, which is why we get:
+
+$\nu=\frac{\tau}{1+r}=\beta\tau$
 
 
 ### Convexity
@@ -118,6 +123,28 @@ At 8%, $V'(0.08)$ approximately equals -1,298,533.14, which gives us:
 $\nu=-\frac{V'(0.08)}{V(0.08)}\approx 2.45$ years.
 
 Should the rate rise up by 0.5 percentage points to 8.5%, effective duration estimates that the deal's value today would fall by about 1.23% even though the payments are unchanged.
+
+
+### Example 3: Red Bull deal continued with continuous compounding
+
+Here our skier still gets £100,000 (year 1), £550,000 (year 3) but the 8% nominal annual rate is now compounded continuously.
+
+Our discount factor is $D(t) = e^{-0.08t}$ making the factors for year one as $e^{-0.08}$ and year three $e^{-0.24}$. Our present values give:
+
+$100{,}000e^{-0.08}\approx \text{£}92{,}311.63$ and $550{,}000e^{-0.24}\approx \text{£}432{,}645.32$, so $V\approx \text{£}524{,}956.96$.
+
+Using unrounded figures the deal is worth £524,956.96 today making its duration:
+
+$\tau\approx\frac{1(92{,}311.63)+3(432{,}645.32)}{524{,}956.96}\approx 2.65$ years.
+
+Next we differentiate the present value which gives $V'(r)=-\sum_{i=1}^{m}t_iC_ie^{-rt_i}$. If we reverse the sign to get the numerator of the duration formula which gives:
+
+$\nu=-\frac{V'(r)}{V(r)}=\tau\approx 2.65$ years
+
+With annual compounding the duration also rounded to 2.65 years however the effective did not being 2.45 years due to $\nu=\tau/1.08$. Continuous compounding however gives the two measures as equal at 2.65 years.
+
+
+### Example 4:
 
 
 ## Solved exercises
