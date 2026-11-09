@@ -42,6 +42,8 @@ We use the derivative $V'(r)$ to see how quickly the present value changes, wher
 
 $V(r_0+\varepsilon)-V(r_0)\approx V'(r_0)\,\varepsilon$.
 
+[See Example 1](#example-1-rising-rates-effect-on-future-funding)
+
 
 ### Effective duration and duration
 
@@ -59,6 +61,9 @@ For a stream of positive payments each payment's weight is its share of total pr
 
 In short, duration describes when the value is received, effective duration is how that value responds to interest rates.
 
+[See Example 2](#example-2-a-skiers-redbull-sponsorship-deal)
+
+
 ### How duration and effective duration are related
 
 With continuous compounding we have $\nu=\tau$. When we differentiate the discount factor $e^{-rt_i}$ brings down a factor of $-t_i$ so $-V'(r)/V(r)$ giving us the same weighted average as duration.
@@ -66,6 +71,8 @@ With continuous compounding we have $\nu=\tau$. When we differentiate the discou
 Using annual compounding our differentiation introduces an additional factor being $1/(1+r)$, which is why we get:
 
 $\nu=\frac{\tau}{1+r}=\beta\tau$
+
+[See Example 3](#example-3-red-bull-deal-continued-with-continuous-compounding)
 
 
 ### Convexity
@@ -81,6 +88,8 @@ $V(r_0+\varepsilon)\approx V(r_0)\left(1-\nu\varepsilon+\frac12 c\varepsilon^2\r
 Where $\var$ and $c$ are calculated at starting rate $r_0$.
 
 For a stream of positive payments the convexity will add an upward correction as to whether the rate is rising or falling because $\epsilon^2$ is positive in either case. Hence we can see that duration alone is overestimating the loss when rates rise and that it is underestimating the gain when rates fall.
+
+[See Example 4](#example-4-valuing-leanders-licence-fee)
 
 
 ### Redington immunisation
@@ -101,11 +110,17 @@ $V_A(r_0+\varepsilon)-V_L(r_0+\varepsilon)\approx \frac12 V_A(r_0)(c_A-c_L)\vare
 
 As $\epsilon^2$ is positive for a rate rise or fall the greater asset convexity will give a surplus for any sufficiently small moves for any direction. However if the convexities are equal then the second order effect will be zero and any higher order terms will determine whether a surplus will appear or a shortfall.
 
+[See Example 5](#example-5-immunisation-of-hounslow-renovation-costs)
+
+
 ### Immunisation in practice
 
 Zero coupon bonds pay once, because of this its duration equals its maturity. A portfolio's duration however is the average of its bond maturities, weighted by their present values.
 
 In order to match the liability duration with positive holding in two bonds we choose one that will mature before the desired duration and one after it. This is called bracketing. We match both present value and duration for first order immunisation and then check that asset's convexity is at least as large as the liability convexity for Redington immunisation.
+
+[See Example 6](#example-6-building-uk-infrastructure-reserve-through-foreign-bonds)
+
 
 ## My example
 
