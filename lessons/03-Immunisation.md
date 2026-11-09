@@ -85,16 +85,16 @@ In order to help us understand let us use an analogy. Imagine you are in Wales a
 
 $V(r_0+\varepsilon)\approx V(r_0)\left(1-\nu\varepsilon+\frac12 c\varepsilon^2\right)$
 
-Where $\var$ and $c$ are calculated at starting rate $r_0$.
+Where $\varepsilon$ and $c$ are calculated at starting rate $r_0$.
 
-For a stream of positive payments the convexity will add an upward correction as to whether the rate is rising or falling because $\epsilon^2$ is positive in either case. Hence we can see that duration alone is overestimating the loss when rates rise and that it is underestimating the gain when rates fall.
+For a stream of positive payments the convexity will add an upward correction as to whether the rate is rising or falling because $\varepsilon^2$ is positive in either case. Hence we can see that duration alone is overestimating the loss when rates rise and that it is underestimating the gain when rates fall.
 
 [See Example 4](#example-4-valuing-leanders-licence-fee)
 
 
 ### Redington immunisation
 
-Remington immunisation means that we want to choose assets so that they cover our liabilities with respect to the current interest rate whilst the funding position is also protected against small rate fluctuations. Our net position is $V_A(r)-V_L(r)$ where $V_L(r)$ is our present value of the amount(/s) owed (expressed as a positive number).
+Redington immunisation means that we want to choose assets so that they cover our liabilities with respect to the current interest rate whilst the funding position is also protected against small rate fluctuations. Our net position is $V_A(r)-V_L(r)$ where $V_L(r)$ is our present value of the amount(/s) owed (expressed as a positive number).
 
 We do it step by step, starting with step one.
 
@@ -108,7 +108,7 @@ If we put all three steps together it will give the equation:
 
 $V_A(r_0+\varepsilon)-V_L(r_0+\varepsilon)\approx \frac12 V_A(r_0)(c_A-c_L)\varepsilon^2$
 
-As $\epsilon^2$ is positive for a rate rise or fall the greater asset convexity will give a surplus for any sufficiently small moves for any direction. However if the convexities are equal then the second order effect will be zero and any higher order terms will determine whether a surplus will appear or a shortfall.
+As $\varepsilon^2$ is positive for a rate rise or fall the greater asset convexity will give a surplus for any sufficiently small moves for any direction. However if the convexities are equal then the second order effect will be zero and any higher order terms will determine whether a surplus will appear or a shortfall.
 
 [See Example 5](#example-5-immunisation-of-hounslow-renovation-costs)
 
