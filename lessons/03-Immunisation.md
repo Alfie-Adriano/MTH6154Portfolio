@@ -401,24 +401,57 @@ $c=\frac{\sum_{i=1}^{m}t_i\left(t_i+\frac{1}{n}\right)C_i\left(1+\frac{r}{n}\rig
 
 
 
-### Sheet 1: 
+### Sheet 1: Duration and Convexity
 
-**What it does:** 
 
-**Inputs:** 
+**What it does:** The sheet calculates the present value, duration, effective duration and convexity of the Red Bull sponsorship payments from my example 2.
+
+
+**Inputs:** The named cell Rate (B3) is set as 8% compounded annually. The table in A7:B9 has payments £100,000 for year 1, £0 in year 2 and £550,000 in year 3.
+
+
+**How it works:** 
+
+- Column C is used to calculate the discount factor and column D multiplies each payment by the discount factor to find its present value.
+
+- Column E calculates t times each present value and divides its total by V to get duration. Effective duration is then calculated through $\nu=\tau/(1+r)$.
+
+- Column F is used to calculate t(t+1) times each present value. Then it divides the total by V and then calculates the convexity multiplying by $(1+r)^{-2}$. (Formulas derived from exercise 7).
+
+
+**Result:** Cells B13:B16 give present value of £529,200.33 and duration of 2.6501 years, an effective of 2.4538 years and convexity 8.7880.
+
+
+### Sheet 2: Exercise 3
+
+
+**What it does:** Recreates pension fund calculations from exercise 3. Finds how much to hold in zero coupon bonds and cash and checks Redington conditions.
+
+
+**Inputs:** Our input is ContRate and is set to 7% compounded continuously and BondYears to 25 years. Liabilities are £20 million in year 10 and £40 million in year 15.
+
 
 **How it works:**
 
- 
+- Liability table uses $e^{r}{t}$ to discount each payment. It also calculates t and $t^2$ times the present values to find the duration and convexity.
 
-**Result:** 
+- Bond's present value is calculated $\tau_LV_L/25$ which matches the liability duration due to the bonds pay in year 25 and that cash has duration zero. The sheet grows the bonds' present value forward to find the face value of P and puts the rest of $V_L$ into cash $Q$.
+
+- Checks then compare assets and liabilities by present value, duration and convexity.
+
+**Result:** The liabilities are worth £23.92 million today and have a duration of 12.92 years. The fund holds bonds worth £12.37 million today and pay £71.19 million at maturity and £11.56 million in cash. The present values match the durations and asset convexity (323.12) exceeds the liability convexity (173.12) so Redington check returns as YES.
 
 
-### Sheet 2:
+### Sheet 3: Rate shocks
+
 
 **What it does:** 
 
+
+
 **Inputs:** 
+
+
 
 **How it works:**
 
