@@ -107,7 +107,19 @@ Ergo, a coupon bond may use multiple spot rates to find the fair price (one for 
 
 ### Forward rates
 
+Forward rate (shown as $f_{n_1,n_2}$ is the effective annual interest rate agreed today for borrowing or lending that starts at time $n_1$ and ends at time $n_2$. A spot rate applies form today whilst a forward rate applies between two future dates.
 
+Under no arbitrage investing from today to $n_2$ must give us the same growth as investing to $n_1$ and then reinvesting at the forward rate agreed to today. This is written out as:
+
+$(1+s_{n_1})^{n_1}(1+f_{n_1,n_2})^{n_2-n_1}=(1+s_{n_2})^{n_2}.$
+
+We then rearrange to give the fair forward rate by:
+
+$f_{n_1,n_2}=\left(\frac{(1+s_{n_2})^{n_2}}{(1+s_{n_1})^{n_1}}\right)^{1/(n_2-n_1)}-1.$
+
+This ratio isolates the growth between the two dates. We then take the $1/(n_2-n_1)$ power as it converts the growth into a one year growth factor and subtracting 1 gives the annual rate.
+
+(Can also be calculated directly from the prices of unit zero coupon bonds: $(1+f_{n_1,n_2})^{n_2-n_1}=\frac{V_{n_1}}{V_{n_2}}.$)
 
 
 ## My example
