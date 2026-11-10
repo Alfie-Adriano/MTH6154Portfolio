@@ -142,7 +142,22 @@ $\frac{qP}{m}=\frac{0.048(1{,}234)}{2}=£29.616\approx £29.62$
 The investor will receive 8 coupons, one every six months. At the end of year four, Amsterdam will pay back the £1234 face value alongside the final coupon which will bring the last payment to be roughly £1263.62.
 
 
-### Example 2:
+### Example 2: JPMorgan prices a Japanese government bond
+
+JPMorgan is considering a purchase of five year Japanese government issues bonds with a total face value equivalent to £47,570,325.27. The bonds have an annual 2.4% coupon that is paid every six months. At Japan's October auction the weighted average price was 100.09% of face value meaning the purchase would cost £47,613,138.56 before accrued interest. 
+
+What is the estimated fair price if JPMorgan discount the payments at 2.38% per year, compounded semi annually?
+
+First we assume that ten evenly spaced coupon payments must remain with each six month coupon being worth:
+
+$\frac{0.024(47{,}570{,}325.27)}{2}\approx £570{,}843.90$
+
+The discount rate per six month period is 1.19%. Next we discount the ten coupons and the face value paid at maturity to give us:
+
+$\text{PV}\approx\sum_{i=1}^{10}\frac{570{,}843.90}{(1.0119)^i}+\frac{47{,}570{,}325.27}{(1.0119)^{10}}\approx \boxed{£47{,}614{,}925}$
+
+Our estimated fair price is very similar to the auction price.
+
 
 ### Example 3:
 
