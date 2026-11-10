@@ -182,9 +182,33 @@ $x=\frac{1+\sqrt{2497}}{48}\approx1.06187 \Rightarrow y\approx6.19\%$
 The 6.19% yield exceeds the 4% coupon rate because the investor pays £16.32 million and receives £17 million at maturity in addition to the coupons.
 
 
-### Example 4:
+### Example 4: Using spot rates top fund SpaceX's thruster upgrades
 
-### Example 5:
+SpaceX needs £10 million in one year and £34 million in two years to upgrade its rocket thrusters. It plans to buy government zero coupon bonds with face values that match the two bills. For every £100 paid at maturity the one year bonds cost £97 today and the two year bonds cost £91. 
+
+What spot rates do the bond prices imply and how much does SpaceX need to set aside today?
+
+First we calculate the one year spot rate as:
+
+$s_1=\frac{100}{97}-1\approx \boxed{3.09\%}$
+
+Then for the two year spot rate we take the square root to convert two years of growth into an annual rate:
+
+$s_2=\left(\frac{100}{91}\right)^{1/2}-1\approx \boxed{4.83\%}$
+
+The larger bills mean that SpaceX needs to buy more bonds at the same quoted price per £100. we then calculate the one year holding costs £10,000,000 x 0.97 =£9,700,000.00 £9,700,000 and the two year comes out as £34,000,000 x 0.91 =£30,940,000.
+
+Ergo, SpaceX needs £40.64 million today with each bond holding maturing when its corresponding bill is due.
+
+
+### Example 5: Locking in a forward rate for an Elizabeth line upgrade
+
+Nikolai, an Elizabeth line operator expects to receive £870,000 in two years and plans to use it for a signalling upgrade in four years. He wants to agree today on the rate it will earn while the money is on deposit. Today's two year spot rate is 4% and the four year spot rate is 5%.
+
+
+
+
+
 
 ## Solved exercises
 
