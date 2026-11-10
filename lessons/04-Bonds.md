@@ -63,6 +63,8 @@ For a fixed rate bond the payments usually come in two forms, being:
 
 The issue price often isn't the same as the face value however the coupons are still based on the face value. A zero coupon bond makes just one payment which is the redemption amount at maturity.
 
+[See Example 1](#example-1-amsterdam-issues-bonds-for-ferries)
+
 
 ### Present value and the fair price of a bond
 
@@ -74,6 +76,8 @@ The sum covers the coupons and the last term covers redemption at maturity. If t
 
 Under no arbitrage the present value is the bond's fair price. A portfolio of zero coupon bonds can make the same payments on the same dates. However if the bond and that portfolio had different prices then an investor could buy the cheaper one and then sell the more expensive one which would keep the price difference whilst the future payments cancel each other out. This is known as the law of one price.
 
+[See Example 2](#example-2-jpmorgan-prices-a-japanese-government-bond)
+
 
 ### Bond yield
 
@@ -84,6 +88,8 @@ $P_0=\sum_{i=1}^{n}\frac{C_i}{(1+y)^{t_i}}+\frac{RP}{(1+y)^T}$
 When pricing a bond we start with a discount rate and calculate for its price. Then to find the yield we work backwards from the known price $P_0$ and solve for $y$.
 
 The coupon rate sets the payments for us based on the bond's face value. Th yield depends on those payments and the price you actually pay. For the same future payments a lower purchase price gives you a higher yield.
+
+[See Example 3](#example-3-finding-the-yield-on-a-disney-bond)
 
 
 ### Spot rates
@@ -104,6 +110,8 @@ $s_T=V_T^{-1/T}-1.$
 
 Ergo, a coupon bond may use multiple spot rates to find the fair price (one for each payment date). Also it is worth noting as a comparison that its yield is a single rate that fits the whole bond price.
 
+[See Example 4](#example-4-using-spot-rates-to-fund-spacexs-thruster-upgrades)
+
 
 ### Forward rates
 
@@ -120,6 +128,8 @@ $f_{n_1,n_2}=\left(\frac{(1+s_{n_2})^{n_2}}{(1+s_{n_1})^{n_1}}\right)^{1/(n_2-n_
 This ratio isolates the growth between the two dates. We then take the $1/(n_2-n_1)$ power as it converts the growth into a one year growth factor and subtracting 1 gives the annual rate.
 
 (Can also be calculated directly from the prices of unit zero coupon bonds: $(1+f_{n_1,n_2})^{n_2-n_1}=\frac{V_{n_1}}{V_{n_2}}.$)
+
+[See Example 5](#example-5-locking-in-a-forward-rate-for-an-elizabeth-line-upgrade)
 
 
 ## My example
