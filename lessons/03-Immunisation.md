@@ -399,7 +399,7 @@ $c=\frac{\sum_{i=1}^{m}t_i\left(t_i+\frac{1}{n}\right)C_i\left(1+\frac{r}{n}\rig
 
 ## Spreadsheet
 
-
+[Download the Lesson 3 spreadsheet](../spreadsheets/03-Immunisation.xlsx)
 
 ### Sheet 1: Duration and Convexity
 
