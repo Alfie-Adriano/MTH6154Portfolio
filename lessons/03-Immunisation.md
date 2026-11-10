@@ -339,21 +339,63 @@ The bank balance has duration zero and a 5 year zero coupon bond has duration fi
 
 ### Exercise 7
 
-**Question:** 
+**Question:** Suppose that interest is paid at nominal rate r and compounded $n$ times a year. Consider a cash flow stream consisting of payments $C_1,\ldots,C_m$ at the end of years $t_1,\ldots,t_m.$.
+
+- a) Prove that the effective duration $\nu$ and the duration $\tau$ of a cash flow stream with yearly payments are related via
+
+$\nu=\left(1+\frac{r}{n}\right)^{-1}\tau.$
+
+- b) Prove that the convexity is equal to 
+
+$c=\frac{\sum_{i=1}^{m}t_i\left(t_i+\frac{1}{n}\right)C_i\left(1+\frac{r}{n}\right)^{-nt_i}}{\sum_{i=1}^{m}C_i\left(1+\frac{r}{n}\right)^{-nt_i}}\left(1+\frac{r}{n}\right)^{-2}.$
 
 <details>
 <summary>Show hint</summary>
 
-
+Write present value using the discount factor $(1+r/n)^{-nt_i}.$. Then differentiate once to get the effective duration and twice to get the convexity. 
 
 </details>
+
 
 <details>
-<summary>Show solution</summary>
+<summary>Show part a</summary>
 
+A payment at time $t_i$ is discounted over $nt_i$ compounding periods, giving the total present value as 
 
+$V(r)=\sum_{i=1}^{m}C_i\left(1+\frac{r}{n}\right)^{-nt_i}.$
+
+Then we differentiate with respect to r. The power rule brings down the $-nt_i$ and the chain rule introduces $1/n$. We cancel the $n$ which gives
+
+$\frac{d}{dr}\left(1+\frac{r}{n}\right)^{-nt_i}=-t_i\left(1+\frac{r}{n}\right)^{-nt_i-1}.$
+
+Then our extra factor of $(1+r/n)^{-1}.$ is the same for every payment, so we get
+
+$-V'(r)=\left(1+\frac{r}{n}\right)^{-1}\sum_{i=1}^{m}t_i C_i\left(1+\frac{r}{n}\right)^{-nt_i}.$
+
+The sum is the numerator of the duration formula. We divide by $V(r)$ to give $\tau$ and we get
+
+$\nu=-\frac{V'(r)}{V(r)}=\left(1+\frac{r}{n}\right)^{-1}\tau.$
 
 </details>
+
+
+<details>
+<summary>Show part b</summary>
+
+First we look to differentiate the discount factor for a second time. Our exponent is $-nt_{i}-1$ and the chain rule contributes $1/n$ which we calculate as:
+
+$\frac{d^2}{dr^2}\left(1+\frac{r}{n}\right)^{-nt_i}=(-t_i)(-nt_i-1)\frac{1}{n}\left(1+\frac{r}{n}\right)^{-nt_i-2}$
+
+With our result we multiply by $C_i$ and sum over the payments and take the common factor of $=t_i\left(t_i+\frac{1}{n}\right)\left(1+\frac{r}{n}\right)^{-nt_i-2}.$ outside, giving
+
+$V''(r)=\left(1+\frac{r}{n}\right)^{-2}\sum_{i=1}^{m}t_i\left(t_i+\frac{1}{n}\right)C_i\left(1+\frac{r}{n}\right)^{-nt_i}.$
+
+Convexity is $V''(r)/V(r).$ Then we substitute the expression for our $V(r)$ from part a to give us
+
+$c=\frac{\sum_{i=1}^{m}t_i\left(t_i+\frac{1}{n}\right)C_i\left(1+\frac{r}{n}\right)^{-nt_i}}{\sum_{i=1}^{m}C_i\left(1+\frac{r}{n}\right)^{-nt_i}}\left(1+\frac{r}{n}\right)^{-2}.$
+
+</details>
+
 
 ## Spreadsheet
 
