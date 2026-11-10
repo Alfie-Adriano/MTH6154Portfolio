@@ -1,6 +1,5 @@
 # Lesson 4: Bonds and the Term Structure of Interest Rates
 
-## Notation
 
 ## Notation
 
@@ -8,31 +7,31 @@
 
 - $P_0$ — price paid for the bond at time 0.
 
-- $q$ — annual coupon rate as a decimal, applied to the bond’s face value.
+- $q$ — annual coupon rate as a decimal applied to the bond’s face value.
 
-- $m$ — number of coupon payments per year. If the coupons are equal, each pays $qP/m$.
+- $m$ — number of coupon payments per year. If the coupons are equal each pays $qP/m$.
 
 - $n$ — total number of coupon payments.
 
-- $C_i$ — amount of the $i$th coupon payment, for $i=1,\ldots,n$.
+- $C_i$ — amount of the $i$th coupon payment for $i=1,\ldots,n$.
 
 - $t_i$ — time in years until the $i$th coupon payment.
 
 - $T$ — time in years until the bond matures.
 
-- $R$ — redemption amount as a fraction of face value. If $R=1$, the bond is redeemed at par.
+- $R$ — redemption amount as a fraction of face value. If $R=1$ the bond is redeemed at par.
 
-- $RP$ — redemption payment at maturity, paid in addition to any final coupon.
+- $RP$ — redemption payment at maturity paid in addition to any final coupon.
 
 - $r$ — annual market interest rate as a decimal, when one rate is used to discount every payment.
 
-- $D(t)$ — discount factor to time $t$, or what £1 paid at time $t$ is worth today.
+- $D(t)$ — discount factor to time $t$ or what £1 paid at time $t$ is worth today.
 
-- $\text{PV}$ — present value of the bond’s future coupons and redemption payment. Under no-arbitrage, this is its fair price.
+- $\text{PV}$ — present value of the bond’s future coupons and redemption payment. Under no arbitrage this is its fair price.
 
-- $V_T$ — price today of a zero-coupon bond that pays £1 at time $T$. It equals $D(T)$.
+- $V_T$ — price today of a zero coupon bond that pays £1 at time $T$. It equals $D(T)$.
 
-- $y$ — bond yield, or the effective annual rate that makes the present value of the bond’s future payments equal to $P_0$.
+- $y$ — bond yield or the effective annual rate that makes the present value of the bond’s future payments equal to $P_0$.
 
 - $r_T$ — annualised simple rate quoted for a deposit lasting $T$ years. Its growth factor over that term is $1+r_TT$.
 
@@ -47,6 +46,7 @@
 - $\sum$ add the terms like present values of the coupons.
 
 - $\prod$ multiply the terms like growth factors over consecutive forward periods.
+
 
 ## Summary
 
