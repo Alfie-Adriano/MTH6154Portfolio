@@ -159,7 +159,28 @@ $\text{PV}\approx\sum_{i=1}^{10}\frac{570{,}843.90}{(1.0119)^i}+\frac{47{,}570{,
 Our estimated fair price is very similar to the auction price.
 
 
-### Example 3:
+### Example 3: Finding the yield on a Disney bond
+
+Let us have Disney issue a two year bond with a face value of £17 million to fund upgrades at Disney World. It pays 4% annual coupon and is redeemed at par. An investor can buy it for £16.32 million or 96% of face value.
+
+What is the bond's yield to maturity?
+
+The annual coupon is $0.04(17,000,000) =$680,000$. The investor receives £680,000 after one year and £17.68 million after two years when Disney pays the final coupon and returns the face value. 
+
+The yield $y$ makes those payments worth £16.32 million today:
+
+$16{,}320{,}000=\frac{680{,}000}{1+y}+\frac{17{,}680{,}000}{(1+y)^2}$
+
+Let $x=1+y$ multiplying by $x^2$ and dividing by 680,000 gives:
+
+$24x^2-x-26=0$
+
+Since x is a growth factor we take the positive root:
+
+$x=\frac{1+\sqrt{2497}}{48}\approx1.06187 \Rightarrow y\approx6.19\%$
+
+The 6.19% yield exceeds the 4% coupon rate because the investor pays £16.32 million and receives £17 million at maturity in addition to the coupons.
+
 
 ### Example 4:
 
