@@ -445,16 +445,16 @@ $c=\frac{\sum_{i=1}^{m}t_i\left(t_i+\frac{1}{n}\right)C_i\left(1+\frac{r}{n}\rig
 ### Sheet 3: Rate shocks
 
 
-**What it does:** 
+**What it does:** Shows the pension fund's surplus changes when interest rate moves away from 7% with the bond and cash holdings fixed.
 
 
-
-**Inputs:** 
-
+**Inputs:** Bond face value $P$, Cash holding $Q$ and liability payments from sheet 2. Testing interest rates from 3% to 11%.
 
 
 **How it works:**
 
+- The sheet recalculates $V_A$ and $V_L$ at each rate and subtracts the liability value from the asset value to find the surplus.
 
+- The chart plots the surplus against interest rate. At around 7% the curve bends up on both sides of zero. (Shows the effect of greater asset convexity)
 
-**Result:**
+**Result:** The surplus is zero at 7% and positive at other rates tested. Its £4.865 million at 3% and £0.20 million at 6% and £0.16 million at 8%
