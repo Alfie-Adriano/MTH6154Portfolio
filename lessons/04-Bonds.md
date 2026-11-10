@@ -200,11 +200,11 @@ What spot rates do the bond prices imply and how much does SpaceX need to set as
 
 First we calculate the one year spot rate as:
 
-$s_1=\frac{100}{97}-1\approx\boxed{3.09\%}$
+$s_1=\frac{100}{97}-1\approx 3.09\%$
 
 Then for the two year spot rate we take the square root to convert two years of growth into an annual rate:
 
-$s_2=\left(\frac{100}{91}\right)^{1/2}-1\approx\boxed{4.83\%}$
+$s_2=\left(\frac{100}{91}\right)^{1/2}-1\approx 4.83\%$
 
 The larger bills mean that SpaceX needs to buy more bonds at the same quoted price per £100. we then calculate the one year holding costs £10,000,000 x 0.97 =£9,700,000.00 £9,700,000 and the two year comes out as £34,000,000 x 0.91 =£30,940,000.
 
@@ -219,15 +219,15 @@ What is the fair annual forward rate from year two to year four and how much wil
 
 First we divide the four year growth factor by the two year growth factor to find the growth between years two and four:
 
-$(1+f_{2,4})^2=\frac{(1.05)^4}{(1.04)^2}\approx 1.123804$
+$(1+f_{2,4})^2=\frac{(1.05)^4}{(1.04)^2}\approx1.123804$
 
 Then take the square root to get the one year growth factor and subtract 1 to get:
 
-$f_{2,4}=\left(\frac{(1.05)^4}{(1.04)^2}\right)^{1/2}-1\approx\boxed{6.01\%}$
+$f_{2,4}=\left(\frac{(1.05)^4}{(1.04)^2}\right)^{1/2}-1\approx 6.01\%$
 
 Then we use the growth factor to calculate the deposit as:
 
-$870{,}000(1+f_{2,4})^2\approx\boxed{£977{,}709.35}$
+$870{,}000(1+f_{2,4})^2\approx£977{,}709.35$
 
 By locking the rate in today, Nikolai can budget for £977,709.35 in year four which is two years before it receives the money to deposit.
 
