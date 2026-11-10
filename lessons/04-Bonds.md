@@ -124,7 +124,23 @@ This ratio isolates the growth between the two dates. We then take the $1/(n_2-n
 
 ## My example
 
-### Example 1:
+
+### Example 1: Amsterdam issues bonds for ferries
+
+In this example, let us have the City of Amsterdam issue bonds to install charging points for its public use electric ferries. Each bond has a face value of £1234 and a four year maturity and an annual coupon rate of 4.8% that is paid every six months. It is issued at 98% of face value and it keeps a 2% discount and is redeemed at par.
+
+What does an investor pay today? What do they receive every six months? And what do they receive at maturity?
+
+Investor pays the issue price today of:
+
+$P_0=0.98(1{,}234)=£1{,}209.32$
+
+Each coupon is based on the face value:
+
+$\frac{qP}{m}=\frac{0.048(1{,}234)}{2}=£29.616\approx £29.62$
+
+The investor will receive 8 coupons, one every six months. At the end of year four, Amsterdam will pay back the £1234 face value alongside the final coupon which will bring the last payment to be roughly £1263.62.
+
 
 ### Example 2:
 
