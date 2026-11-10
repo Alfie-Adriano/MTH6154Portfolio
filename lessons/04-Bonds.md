@@ -164,7 +164,7 @@ $\frac{0.024(47{,}570{,}325.27)}{2}\approx £570{,}843.90$
 
 The discount rate per six month period is 1.19%. Next we discount the ten coupons and the face value paid at maturity to give us:
 
-$\text{PV}\approx\sum_{i=1}^{10}\frac{570{,}843.90}{(1.0119)^i}+\frac{47{,}570{,}325.27}{(1.0119)^{10}}\approx \boxed{£47{,}614{,}925}$
+$\text{PV}\approx\sum_{i=1}^{10}\frac{570{,}843.90}{(1.0119)^i}+\frac{47{,}570{,}325.27}{(1.0119)^{10}}\approx £47{,}614{,}925$
 
 Our estimated fair price is very similar to the auction price.
 
