@@ -236,6 +236,60 @@ By locking the rate in today, Nikolai can budget for £977,709.35 in year four w
 
 ### Exercise A
 
+Bank A offers a monthly compounded interest rate $r_{1M}$ and bank B offers a yearly compounded interest rate $r_{1Y}$. Explain why $1+r_{1Y}>\left(1+\frac{1}{12}r_{1M}\right)^{12}$ also leads to arbitrage.
+
+<details>
+<summary>Show hint</summary>
+
+The two sides of the inequality tel you what £1 grows to after one year at each bank. Think which bank should you borrow from and which you should deposit the money with.
+
+</details>
+
+<details>
+<summary>Show solution</summary>
+
+You should assume you can borrow and deposit at the quoted rates with no fees. Look at the inequality, it says that Bank B has the higher one year growth factor.
+
+Calculate for today, borrow £1 from Bank A and deposit it with Bank B. The £1 you borrow covers the deposit, so you put in none of your own money.
+
+Now do it for one year. Bank B pays you $1 + r_{1Y}$ pounds. And you will repay Bank A $\left(1+r_{1M}/12\right)^{12}$ pounds because its monthly rate is applied 12 times for the 12 months in a year. Then you keep the difference:
+
+$\text{Profit}=(1+r_{1Y})-\left(1+\frac{r_{1M}}{12}\right)^{12}>0$
+
+This is arbitrage because the two transactions require no initial investment and they lock in a positive profit.
+
+</details>
+
+
 ### Exercise B
+
+Let $f_{n_1,n_2}$ be the fair forward rate from time $n_1$ to time $n_2$. Show that if a bank offers a FRA for a loan from $n_1$ to $n_2$ at a rate $f<f_{n_1,n_2}$, there is an arbitrage.
+
+<details>
+<summary>Show hint</summary>
+
+The FRA is letting you borrow £1 at time $n_1$ at below the market rate. So think, to lock in what the £1 can earn between $n_1$ and $n_2$ you should use today's spot rates. How much do you think you need to borrow today so that you owe £1 at time $n_1$?
+
+</details>
+
+<details>
+<summary>Show solution</summary>
+
+Calculate for today. If we borrow $(1+s_{n_1})^{-n_1}$ pounds until time $n_1$ and deposit the entire amount until time $n_2$. Then enter the FRA to borrow £1 at time $n_1$ and then repay it at time $n_2$ at rate $f$. The loan today then funds the deposit and the initial net cash flow is zero.
+
+Then calculate at time $n_1$ as your first loan has grown to exactly £1. Then use that £1 borrowed through the FRA to repay it so the net cash flow is zero again.
+
+At time $n_2$ your deposit will pay:
+
+$\frac{(1+s_{n_2})^{n_2}}{(1+s_{n_1})^{n_1}}=(1+f_{n_1,n_2})^{n_2-n_1}$
+
+You then repay $(1+f)^{n_2-n_1}$ under the FRA. And because $f<f_{n_1,n_2}$ make sure you keep a strictly positive profit, being:
+
+$(1+f_{n_1,n_2})^{n_2-n_1}-(1+f)^{n_2-n_1}>0$
+
+All the rates are then fixed today which guarantees us profit without an initial investment.
+
+</details>
+
 
 ## Spreadsheet
