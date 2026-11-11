@@ -100,3 +100,14 @@ If every deposit was the same amount D and the yearly rates are also iid then we
 $\mathbb{E}[B_n]=D(g+g^2+\cdots+g^n)=\frac{Dg(1-g^n)}{1-g}, \quad g\ne1.$
 
 If $g=1$ every term then equals $D$ so the expected balance comes out as $nD$.
+
+
+### Log normal interest rates
+
+A log normal growth factor is one where there logarithm follows a normal distribution. For example, if a continuously compounded annual rate $R$ is normal then the growth factor $G=e^{R}$ is log normal. This is why G stays positive and allows negative interest rates. If R is an effective annual rate instead we model $1+R$ as log normal to get the same kind of growth factor.
+
+If $\ln G\sim\mathcal{N}(\mu,\sigma^2)$ then the expected annual growth factor is:
+
+$\mathbb{E}[G]=e^{\mu+\sigma^2/2}$
+
+Here our 
