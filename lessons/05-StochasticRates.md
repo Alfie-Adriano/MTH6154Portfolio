@@ -85,3 +85,18 @@ $\mathbb{E}[B_n]=P\left(\mathbb{E}[G]\right)^n,$, $\text{Var}(B_n)=P^2\left[\lef
 The variance formula then follows by squaring the balance and then applying independence to the squared growth factors. The iid assumption also simplifies both calculations because in practice, rates stay high or low across several years, so one year's rate can give information regarding the next year.
 
 
+### Regular deposits
+
+When you deposit $D_i$ at the beginning of a year say year $I$, both your existing balance and your new deposit earn that year's interest. Starting from $B_0 = 0$, the balance at the end of the year $I$ is:
+
+$B_i=(B_{i-1}+D_i)G_i.$
+
+If yearly rates are independent and the deposits are fixed in advance then the years growth factor is independent of the balance built up from earlier years, giving:
+
+$\mathbb{E}[B_i]=\bigl(\mathbb{E}[B_{i-1}]+D_i\bigr)\mathbb{E}[G_i].$
+
+If every deposit was the same amount D and the yearly rates are also iid then we write $g = \mathbb{E}[G]$ for the common expected annual growth factor. The first deposit earns interest for $n$ years whilst the last earns interest just for one year. Expected balance therefore turns out to be a geometric sum:
+
+$\mathbb{E}[B_n]=D(g+g^2+\cdots+g^n)=\frac{Dg(1-g^n)}{1-g}, \quad g\ne1.$
+
+If $g=1$ every term then equals $D$ so the expected balance comes out as $nD$.
