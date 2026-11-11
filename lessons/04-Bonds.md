@@ -283,7 +283,7 @@ At time $n_2$ your deposit will pay:
 
 $\frac{(1+s_{n_2})^{n_2}}{(1+s_{n_1})^{n_1}}=(1+f_{n_1,n_2})^{n_2-n_1}$
 
-You then repay $(1+f)^{n_2-n_1}$ under the FRA. And because $f<f_{n_1,n_2}$ make sure you keep a strictly positive profit, being:
+You then repay $(1+f)^{n_2-n_1}$ under the FRA. And because $f<f_{n_1,n_2}$ you have a strictly positive profit, being:
 
 $(1+f_{n_1,n_2})^{n_2-n_1}-(1+f)^{n_2-n_1}>0$
 
