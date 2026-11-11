@@ -128,4 +128,20 @@ $\mathbb{P}(B_n>x)=1-\Phi\left(\frac{\ln(x/P)-n\mu}{\sigma\sqrt{n}}\right).$
 ## My examples
 
 
-### Example 1: 
+### Example 1: PureGym saving for renovations
+
+PureGym is planning to put £50,000 into a three year fixed rate savings account to help pay for upkeep and renovations across its gyms in Surrey. Upon opening the account there is a 60% chance that the annual rate will be 3% and a 40% it will be 6%. The rate at opening applies for all three years with annual compounding.
+
+What is the expected balance after three years?
+
+First we calculate our balance for each possible rate, for 3% with probability of 60% we calculate:
+
+$50,000(1.03)^3 =$54{,}636.35 £54{,}636.35$
+
+For 6% with probability of 40% we calculate $50{,}000(1.06)^3=£59{,}550.80$
+
+Next, weight each balance by the probability:
+
+$\mathbb{E}[B_3]=0.60(54{,}636.35)+0.40(59{,}550.80)=£56{,}602.13$
+
+Compounding at the expected rate of 4.2% would give £56,568.30. The expected balance is slightly higher because each possible rate compounds for three years before the balances are averaged.
