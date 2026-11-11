@@ -293,3 +293,48 @@ All the rates are then fixed today which guarantees us profit without an initial
 
 
 ## Spreadsheet
+
+[Download the Lesson 4 spreadsheet](../spreadsheets/04-Bonds.xlsx)
+
+
+### Sheet 1: Bond price
+
+
+**What it does** The first sheet prices a four year bond using different spot rates for each payment date and then finds the single annual yield that reproduces that price.
+
+**Inputs**
+
+- Facevalue (£50,000)
+
+- Couponrate (5% annually)
+
+- Redemptionr (100% so bond is redeemed at par)
+
+- Spot rate in rows 9-12 is 3.0%, 3.4%, 3.7% and 4.0% for years one to four respectively.
+
+**How it works**
+
+- Column C calculates the discount factor for each year whilst Column D lists our cash flows with £2500 in each of the first three years and the larger £52,500 in our fourth year (when the final coupon and redemption is paid together). Column E multiplies each of our cash flows by its discount factor.
+
+- Cell B14 sums our present values, giving us a fair price of 351,884.53. Cell B15 uses the RATE function from Excel to find our annual yield being 3.9626%. Cell B16 then checks the result by discounting all four cash flows at that yield and then recovering the fair price for us.
+
+- The price yield table shows us the price falling as the yield rises, also displayed in the chart. The bond is then worth £60,000 at 0%, £50,000 at 5% and £42,075.34 at 10%. The chart shows the curve flattens as the yield rises.
+
+**Results** The sheet ties the present value and the fair price of a bond, bond yield and spot rates which applies the pricing method from example 2 and the yield calculation from example 3 to the same bond.
+
+
+### Sheet 2: Spot and forward
+
+**What it does** It converts the zero coupon bond prices into the spot rates and then uses them to calculate forward rates. The chart then compares ht spot curve with the one year forward rates.
+
+**Inputs** We change the unit zero coupon price for years 1 to 5 being 0.97, 0.93, 0.88, 0.83 and 0.78, and then in the calculator we set n1 and n2 to the start and end years of the forward period.
+
+**How it works**
+
+- The sheet converts the zero coupon price into a spot rate which with the given prices raises the spot rate from 3.0928% in year 1 to 5.0948% in year 5.
+
+- The one year forward rate from today is our one year spot rate which for each later year the sheet uses $V_{T-1}/V_T-1$. The forward rates then sit above their corresponding spot rates from year 2 onwards.
+
+- The calculator then uses the function INDEX to look up prices and spot rates for selected years. From year 2 to 5 both methods give 6.0383%. The difference displays zero which confirms the two formulas agree and changing the period from year 1 to 4 gives 5.3330%.
+
+**Results** The sheet uses the zero coupon pricing from example 4 and the forward rate from example 5, which the calculator checks with two equivalent forms of the no arbitrage relationship.
