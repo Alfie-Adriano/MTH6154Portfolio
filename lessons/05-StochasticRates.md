@@ -42,3 +42,46 @@ Lesson 5: Stochastic Interest Rates
 - $e^x$ and $\ln x$ — the natural exponential and natural logarithm.
 
 - $\sum$ — add the indicated terms by $\prod$ — multiply the indicated terms.
+
+
+## Summary
+
+
+### Fixed interest rate model
+
+In a fixed interest rate model the rate is uncertain at the start. But once a value of $R$ is realised then the same rate applies each year. As an example if the rate turns out to be 4% the deposit will earn 4% in every year of the investment.
+
+A single deposit $P$ grows to $B_n=PG^n$
+
+where $G=1+R$ if $R$ is an effective annual rate, and $G=e^R$ if $R$ is continuously compounded.
+
+To find the expected balance we calculate the final balance for each possible rate and then weigh each balance by its probability displayed as:
+
+$\mathbb{E}[B_n]=P\mathbb{E}[G^n]$
+
+Calculating in order is important because compounding is usually non linear so if we use the average rate in the balance formula we can get a different result from averaging the balances after compounding.
+
+The variance is used to measure how much the possible balances spread out around the expected balance:
+
+$\text{Var}(B_n)=P^2\left(\mathbb{E}[G^{2n}]-\left(\mathbb{E}[G^n]\right)^2\right)$
+
+
+### Varying interest rates
+
+In the varying interest rate model each year has its own random rate shown as $R_i$. The balance at the end of one year becomes the starting balance for the next causing the yearly growth factors to multiply as:
+
+$B_n=P\prod_{i=1}^{n}G_i$
+
+Where $G_i = 1 + R_i$ for an effective annual rate and $G_i = e^{R_i}$ for a continuously compounded rate.
+
+If the yearly rates are independent then we multiply the expected growth factors to find the expected balances, being:
+
+$\mathbb{E}[B_n]=P\prod_{i=1}^{n}\mathbb{E}[G_i].$
+
+If rates are also identically distributed then each year has the same expected growth factor. If we write G for a growth factor with the common distribution we get:
+
+$\mathbb{E}[B_n]=P\left(\mathbb{E}[G]\right)^n,$, $\text{Var}(B_n)=P^2\left[\left(\mathbb{E}[G^2]\right)^n-\left(\mathbb{E}[G]\right)^{2n}\right].$
+
+The variance formula then follows by squaring the balance and then applying independence to the squared growth factors. The iid assumption also simplifies both calculations because in practice, rates stay high or low across several years, so one year's rate can give information regarding the next year.
+
+
