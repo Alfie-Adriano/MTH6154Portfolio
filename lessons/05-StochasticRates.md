@@ -110,4 +110,22 @@ If $\ln G\sim\mathcal{N}(\mu,\sigma^2)$ then the expected annual growth factor i
 
 $\mathbb{E}[G]=e^{\mu+\sigma^2/2}$
 
-Here our 
+Here $\mu$ and $\sigma^2$ describe the logarithm of the growth factor. The variance term is used to explain why the expected growth factor can exceed $e^{\mu}$.
+
+For independent yearly growth factors with the same distribution if we take logs then it will turn their product into a sum:
+
+$\ln S_n=\sum_{i=1}^{n}\ln G_i\sim\mathcal{N}(n\mu,n\sigma^2).$
+
+So $S_n$ is also log normal and a single deposit has expected final balance:
+
+$\mathbb{E}[B_n]=Pe^{n\mu+n\sigma^2/2}.$
+
+To find the probability that $B_n$ exceeds a target of $x$ then we use $B_n = PS_n$ and then take logarithms and convert to a standard normal probability:
+
+$\mathbb{P}(B_n>x)=1-\Phi\left(\frac{\ln(x/P)-n\mu}{\sigma\sqrt{n}}\right).$
+
+
+## My examples
+
+
+### Example 1: 
