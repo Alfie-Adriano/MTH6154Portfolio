@@ -23,7 +23,7 @@ Lesson 5: Stochastic Interest Rates
 
 - $\mathbb{E}[X]$ — expected value of $X$ or its probability weighted average.
 
-- $\operatorname{Var}(X)$ — variance of $X$ which measures how spread out its values are around the mean. The standard deviation is $\sqrt{\operatorname{Var}(X)}$.
+- $\text{Var}(X)$ — variance of $X$ which measures how spread out its values are around the mean. The standard deviation is $\sqrt{\text{Var}(X)}$.
 
 - $\mathbb{P}(X>x)$ — probability that the random variable $X$ exceeds the threshold $x$.
 
@@ -31,7 +31,7 @@ Lesson 5: Stochastic Interest Rates
 
 - $Y\sim\mathcal{N}(\mu,\sigma^2)$ — $Y$ follows a normal distribution with mean $\mu$ and variance $\sigma^2$ and its standard deviation is $\sigma$.
 
-- $X\sim\operatorname{LogNormal}(\mu,\sigma^2)$ — $X$ is log-normal which means $X=e^Y$ with $Y\sim\mathcal{N}(\mu,\sigma^2)$ so $\mu$ and $\sigma^2$ describe $\ln X$.
+- $X\sim\text{LogNormal}(\mu,\sigma^2)$ — $X$ is log-normal which means $X=e^Y$ with $Y\sim\mathcal{N}(\mu,\sigma^2)$ so $\mu$ and $\sigma^2$ describe $\ln X$.
 
 - $Z\sim\mathcal{N}(0,1)$ — a standard normal variable. A normal variable $Y$ can be written as $Y=\mu+\sigma Z$.
 
@@ -186,7 +186,7 @@ $g=0.5(1.03)+0.5(1.065)=1.0475.$
 
 The first deposit earns interest for three years, the second for two and the third for one. Because the yearly rates are independent we will multiply the expected growth factors for the years each deposit is in the account.
 
-$\mathbb{E}[B_3]=7{,}500\bigl(1.0475^3+1.0475^2+1.0475\bigr)\approx\£24{,}705.99.$
+$\mathbb{E}[B_3]=7{,}500\bigl(1.0475^3+1.0475^2+1.0475\bigr)\approx£24{,}705.99.$
 
 The producers deposit £22,500 in total and they are expected to earn £2205.99 in interest. The first deposit contributes the most to the interest because it stays in the account the longest.
 
@@ -203,11 +203,11 @@ $\ln S_5\sim\mathcal N\bigl(5(0.05),\,5(0.015)^2\bigr)=\mathcal N(0.25,0.001125)
 
 We then calculate the expected balance as is below:
 
-$\mathbb E[B_5]=340{,}000e^{0.25+0.001125/2}\approx\boxed{£436{,}800}.$
+$\mathbb E[B_5]=340{,}000e^{0.25+0.001125/2}\approx\£436{,}800.$
 
 To exceed £408,000 the deposit needs its growth factor to be above 1.20 (408,000/340,000=1.2). So we take logs and standardise as is below:
 
-$\mathbb P(B_5>408{,}000)=1-\Phi\!\left(\frac{\ln(1.20)-0.25}{\sqrt{0.001125}}\right)\approx97.8\%.$
+$\mathbb P(B_5>408{,}000)=1-\Phi\left(\frac{\ln(1.20)-0.25}{\sqrt{0.001125}}\right)\approx97.8%.$
 
 Using this model Pizza Express should finish £28,800 above its target with only a 2.2% chance of falling short.
 
