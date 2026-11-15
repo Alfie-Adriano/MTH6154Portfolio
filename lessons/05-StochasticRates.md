@@ -138,7 +138,7 @@ $\mathbb{P}(B_n>x)=1-\Phi\left(\frac{\ln(x/P)-n\mu}{\sigma\sqrt{n}}\right).$
 
 ### Example 1: PureGym saving for renovations
 
-PureGym is planning to put £50,000 into a three year fixed rate savings account to help pay for upkeep and renovations across its gyms in Surrey. Upon opening the account there is a 60% chance that the annual rate will be 3% and a 40% it will be 6%. The rate at opening applies for all three years with annual compounding.
+Imagine a gym chain, PureGym is planning to put £50,000 into a three year fixed rate savings account to help pay for upkeep and renovations across its gyms in Surrey. Upon opening the account there is a 60% chance that the annual rate will be 3% and a 40% it will be 6%. The rate at opening applies for all three years with annual compounding.
 
 What is the expected balance after three years?
 
@@ -157,7 +157,7 @@ Compounding at the expected rate of 4.2% would give £56,568.30. The expected ba
 
 ### Example 2: Wright Brothers saves for fleet repairs
 
-The Wright Bros, a fishing company, have put £500,000 into a savings account for two years to help pay for repairs to its fleet. The interest rate resets at the start of each year. Each year it has an equal chance of being 2% or 7% and the two years rates are independent.
+Imagine a fishing company, The Wright Bros, have put £500,000 into a savings account for two years to help pay for repairs to its fleet. The interest rate resets at the start of each year. Each year it has an equal chance of being 2% or 7% and the two years rates are independent.
 
 What is the expected balance after two years?
 
@@ -184,7 +184,7 @@ Hence the company can budget around an expected balance of £546,012.50, though 
 
 ### Example 3: Saving for The Phantom of the Opera's 50th anniversary
 
-The West End producers of The Phantom of the Opera are depositing £7500 at the beginning of each year for the next three years to help pay for grander props in advance of the show's 50th anniversary. Each year the effective interest rate is equally likely to be 3% or 6.5% (independently of other years).
+Imagine West End producers, such as The Phantom of the Opera's are depositing £7500 at the beginning of each year for the next three years to help pay for grander props in advance of the show's 50th anniversary. Each year the effective interest rate is equally likely to be 3% or 6.5% (independently of other years).
 
 What is the expected balance at the end of year three?
 
@@ -201,7 +201,7 @@ The producers deposit £22,500 in total and they are expected to earn £2205.99 
 
 ### Example 4: Pizza Express saves for wood fired ovens
 
-Pizza Express deposits £340,000 for five years to help install wood fires ovens across its restaurants in the South East of the UK. It models each years continuously compounded interest rate through a normal distribution with a mean of 5% and a standard deviation of 1.5 percentage points. (Yearly rates are independent).
+Imagine an Italian restaurant chain, such as Pizza Express, deposits £340,000 for five years to help install wood fires ovens across their restaurants in the South East of the UK. It models each years continuously compounded interest rate through a normal distribution with a mean of 5% and a standard deviation of 1.5 percentage points. (Yearly rates are independent).
 
 What is the expected balance after five years and what is the probability it rises above £408,000?
 
@@ -219,5 +219,62 @@ $\mathbb P(B_5>408{,}000)=1-\Phi\left(\frac{\ln(1.20)-0.25}{\sqrt{0.001125}}\rig
 
 Using this model Pizza Express should finish £28,800 above its target with only a 2.2% chance of falling short.
 
+
+## Solved exercises
+
+
+### Exercise 3
+
+Let $X\sim\text{LogNormal}(\mu,\sigma^2)\), so \(X=e^Y\) with \(Y\sim\mathcal N(\mu,\sigma^2)$. 
+
+a) Explain why $X$ is not normally distributed and why a log normal distribution can be useful in modelling financial assets.
+
+b) Derive $\mathbb E[X]$ using the standard normal density.
+
+
+<details>
+<summary>Show hint</summary>
+
+For part a, think about which values $e^Y$ take.
+
+For part b, write $Y=\mu+\sigma Z$ and complete the square in $\sigma z-z^2/2$.
+
+</details>
+
+
+<details>
+<summary>Show part a</summary>
+
+Because $X = e^{Y}$ it is always positive. As a normal variable with positive variance can take negative values so $X$ cannot follow a normal distribution.
+This makes the log normal distribution become useful for modelling asset prices or growth factors. A growth factor between 0 and 1 represents a loss whilst keeping the resulting asset price positive.
+
+</details>
+
+
+<details>
+<summary>Show part b</summary>
+
+First we write $Y=\mu+\sigma Z$ where $Z\sim\mathcal N(0,1)$. Then substitute in our values into the expectation such as:
+
+$\mathbb E[X]=\mathbb E[e^{\mu+\sigma Z}]=e^\mu\mathbb E[e^{\sigma Z}]$
+
+Then we use our standard normal density and combine it with the exponentials to give
+
+$\mathbb E[X]=e^\mu\int_{-\infty}^{\infty}e^{\sigma z}\frac{e^{-z^2/2}}{\sqrt{2\pi}}\,dz=\frac{e^\mu}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{\sigma z-z^2/2}\,dz$
+
+Then we complete the square inside of the exponent:
+
+$\sigma z-\frac{z^2}{2}=-\frac{(z-\sigma)^2}{2}+\frac{\sigma^2}{2}$
+
+The term $\sigma^2/2$ is a constant meaning that its exponential can be moved outside of the integral. So now we set $t=z-\sigma$ so that $dt=dz$ and so that the limits remain as $-\infty$ and $\infty$:
+
+$\mathbb E[X]=e^{\mu+\sigma^2/2}\int_{-\infty}^{\infty}\frac{e^{-t^2/2}}{\sqrt{2\pi}}\,dt$
+
+Therefore our integral becomes equal to 1 as it is the total area underneath the standard normal density.
+Hence we get:
+
+$\\mathbb E[X]=e^{\mu+\sigma^2/2}.$
+
+</details>
 
 
