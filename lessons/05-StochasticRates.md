@@ -278,3 +278,77 @@ $\\mathbb E[X]=e^{\mu+\sigma^2/2}.$
 </details>
 
 
+### Exercise 6
+
+You deposit £100 for 10 years. Where the yearly rates $R_i$ (from $t = I-1$ to $t = I$) are i.i.d. and the accumulated value is $B\_{10}=100\prod\_{i=1}^{10}G_i$.
+
+a) Why do we assume the rates are i.i.d. and is that realistic
+
+b) Take $R_i\sim\mathcal N(0.057,0.0008)$ as continuously compounded, so $G_i=e^{R_i}\sim\text{LogNormal}(0.057,0.0008)$. 
+- Find the mean of the accumulated value after 10 years and say where you use independence.
+- Find the probability that the accumulated value exceeds 110% of its mean.
+
+c) Repeat b with $R_i$ as the effective rate so $G_i=1+R_i\sim\text{LogNormal}(0.057,0.0008)$.
+
+<details>
+<summary>Show hint</summary>
+
+For a, think about whether knowing this year's rate tells you anything about next year's and whether the same range of rates is equally likely in every year.
+
+For b, on the mean use the independence to turn the expectation of a product into a product of expectations.
+
+</details>
+
+
+<details>
+<summary>Show part a</summary>
+
+If something is independent then it lets us multiply the expected yearly growth factors. If have identical distribution means then we can use the same expected growth factor for each year.
+In the real world, rates often stay high or low for multiple years so this years rate can tell us something about the next years. The distribution can also change over time as economic conditions and monetary policy change.
+
+</details>
+
+
+
+<details>
+<summary>Show part b</summary>
+
+Firs we calculate the Mean balance. Where each year’s growth factor is $G_i=e^{R_i}$. Using the result from Exercise 3, with mean parameter $0.057$ and variance parameter $0.0008$,
+
+$\mathbb E[G_i]=e^{0.057+0.0008/2}=e^{0.0574}.$
+
+The expected balance is
+
+$\mathbb E[B_{10}]=100\,\mathbb E\left[\prod_{i=1}^{10}G_i\right]=100\prod_{i=1}^{10}\mathbb E[G_i]=100e^{0.574}\approx\£177.54.$
+
+Independence is used when we replace the expectation of the product with the product of the expectations. The growth factors are independent because each one depends on its own year’s rate.
+
+For calculating the probability of exceeding 110% of the mean. We take logs and turn the product of growth factors into a sum of yearly rates:
+
+$\ln(B_{10}/100)=\sum_{i=1}^{10}R_i\sim\mathcal N(0.570,0.008)$
+
+We use the independence again so that we are able to add the variances together. Our target is to get $1.10\,\mathbb E[B_{10}]=110e^{0.574}$ which is roughly £195.29. Then we take logs and standardise so we get:
+
+$\mathbb P(B_{10}>1.10\,\mathbb E[B_{10}])&=1-\Phi\left(\frac{\ln(1.10)+0.574-0.570}{\sqrt{0.008}}\right)$
+
+$\approx 1-\Phi(1.1103)\approx13.34%$
+
+</details>
+
+
+<details>
+<summary>Show part c</summary>
+
+Now we are using $G_i=1+R_i$ instead, and the question gives us $G_i\sim\text{LogNormal}(0.057,0.0008)$. Which is the same distribution we used for the growth factor in part b meaning we get the same distribution for the final balance.
+
+Calculating the mean, we use independence again to let us multiply the expected growth factors:
+
+$\mathbb E[B_{10}]=100\prod_{i=1}^{10}\mathbb E[1+R_i]=100(e^{0.0574})^{10}\approx£177.54$
+
+For probability, the variables we add are now $\ln(1+R_i)$ and each is normal with a mean of 0.057 and a variance of 0.0008 and they are independent. Hence we get
+
+$\ln(B_{10}/100)=\sum_{i=1}^{10}\ln(1+R_i)\sim\mathcal N(0.570,0.008)$
+
+The target and the log balance distribution is the same as it was in part b meaning the probability of exceeding 110% of the mean is the same as it was in part b, 13.34%.
+
+</details>
