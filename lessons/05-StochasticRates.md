@@ -352,3 +352,62 @@ $\ln(B_{10}/100)=\sum_{i=1}^{10}\ln(1+R_i)\sim\mathcal N(0.570,0.008)$
 The target and the log balance distribution is the same as it was in part b meaning the probability of exceeding 110% of the mean is the same as it was in part b, 13.34%.
 
 </details>
+
+
+## Spreadsheet
+
+[Download the Lesson 5 spreadsheet](../spreadsheets/05-StochasticRates.xlsx)
+
+### Sheet 1: Random fixed rate
+
+**What it does:** It compares the expected balance when a rate is chosen at the start and fixed for the whole term with the balance you get when you compound at the expected rate.
+
+
+**Inputs:** 
+
+- 'Deposit' (B3) is £50,000 
+
+- 'Years' (B4) is 3
+
+- Rows 8-9 contain the two possible annual rates: 3% with probability 0.6 and 6% with probability 0.4. 
+
+
+**How it works:** 
+
+- Column C calculates final balance for each rate in the first scenario row. Columns D and E multiply each balance and rate by its probability. The sheet checks that the probabilities add to 1 then sums the weighted values to give an expected balance of £56,602.13 and an expected rate of 4.2%.
+
+- Compounding at 4.2% gives £56,568.30 which is £33.83 less than expected balance's. The difference is an example of Jensen's inequality where the three year growth factor $(1+R)^3$ is convex in $R$, so averaging after compounding gives a higher balance.
+ 
+
+**Link to the lesson:** The sheet reproduces Example 1 and applies the fixed interest rate model.
+
+
+
+### Sheet 2: Lognormal growth
+
+**What it does:** The sheet calculates expected balance and probability of exceeding a target when independent annual growth factors are log normal. Then there is a plot for the range of possible balances and how they change over time.
+
+
+**Inputs:** 
+
+- 'P0' (B3) is £100
+
+- 'N' (B4) is 10 years
+
+- 'Mu' (B5) is 0.057
+
+- 'Sigma2' (B6) is 0.0008 (variance of the log growth factor)
+
+- 'Frac' (B7) sets the target at 110% of the expected balance 
+
+
+**How it works:**
+
+- It takes logs and turns the product of annual growth factors into a sum. After 10 years the total log growth has mean 0.5700 and variance 0.0080. Each annual growth factor has mean $e^{\mu+\sigma^2/2}\approx 1.0591$. Independence lets the variances add and the expected growth factors multiply to give an expected balance of £177.54.
+
+- Target is £195.29 or 110% of unrounded expected balance. The sheet standardises the log of the target growth factor to get $z \approx1.1103$ then uses the function '1-NORM.S.DIST(z,TRUE) to find a 13.34% chance of the target getting exceeded.
+
+- The year by year table uses NORM.S.INV to calculate the 5th and 95th percentiles whilst the chart shows the mean and the widening range between those percentiles which is has the middle 90% of modelled balances. At year 10 the range runs from about £152.64 to £204.85.
+
+
+**Link to the lesson:** Expected growth formula comes from Exercise 3. Mean and probability match Exercise 6 b and c. Both versions give the same log normal distribution for annual growth factor.
