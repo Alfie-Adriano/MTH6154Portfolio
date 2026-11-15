@@ -145,3 +145,33 @@ Next, weight each balance by the probability:
 $\mathbb{E}[B_3]=0.60(54{,}636.35)+0.40(59{,}550.80)=£56{,}602.13$
 
 Compounding at the expected rate of 4.2% would give £56,568.30. The expected balance is slightly higher because each possible rate compounds for three years before the balances are averaged.
+
+
+### Example 2: Wright Brothers saves for fleet repairs
+
+The Wright Bros, a fishing company, have put £500,000 into a savings account for two years to help pay for repairs to its fleet. The interest rate resets at the start of each year. Each year it has an equal chance of being 2% or 7% and the two years rates are independent.
+
+What is the expected balance after two years?
+
+First, multiply the yearly growth factors to give four equally likely outcomes:
+
+2% (Year 1) and 2% (Year 2) gives 500,000(1.02)^2 = £520,200.
+
+2% (Year 1) and 7% (Year 2) gives 500,000(1.02)(1.07) = £545,700.
+
+7% (Year 1) and 2% (Year 2) gives 500,000(1.02)(1.07) = £545,700.
+
+7% (Year 1) and 7% (Year 2) gives 500,000(1.07)^2 = £572,450.
+
+The expected growth factor in each year is:
+
+$\mathbb{E}[G_i]=0.5(1.02)+0.5(1.07)=1.045.$
+
+Because the rates are all independent we multiply the expected growth factors to. Find the expected balance:
+
+$\mathbb{E}[B_2]=500{,}000(1.045)^2=£546{,}012.50.$
+
+Hence the company can budget around an expected balance of £546,012.50, though it would have £520,200 available for repairs if both years are low at 2%.
+
+
+
