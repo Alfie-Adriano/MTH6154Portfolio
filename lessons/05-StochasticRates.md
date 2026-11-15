@@ -191,3 +191,25 @@ $\mathbb{E}[B_3]=7{,}500\bigl(1.0475^3+1.0475^2+1.0475\bigr)\approx\£24{,}705.9
 The producers deposit £22,500 in total and they are expected to earn £2205.99 in interest. The first deposit contributes the most to the interest because it stays in the account the longest.
 
 
+### Example 4: Pizza Express saves for wood fired ovens
+
+Pizza Express deposits £340,000 for five years to help install wood fires ovens across its restaurants in the South East of the UK. It models each years continuously compounded interest rate through a normal distribution with a mean of 5% and a standard deviation of 1.5 percentage points. (Yearly rates are independent).
+
+What is the expected balance after five years and what is the probability it rises above £408,000?
+
+First we note that the yearly growth factors multiply so we take logs to turn them into a sum of their yearly rates, where the mean and variances add over the five years.
+
+$\ln S_5\sim\mathcal N\bigl(5(0.05),\,5(0.015)^2\bigr)=\mathcal N(0.25,0.001125).$
+
+We then calculate the expected balance as is below:
+
+$\mathbb E[B_5]=340{,}000e^{0.25+0.001125/2}\approx\boxed{£436{,}800}.$
+
+To exceed £408,000 the deposit needs its growth factor to be above 1.20 (408,000/340,000=1.2). So we take logs and standardise as is below:
+
+$\mathbb P(B_5>408{,}000)=1-\Phi\!\left(\frac{\ln(1.20)-0.25}{\sqrt{0.001125}}\right)\approx97.8\%.$
+
+Using this model Pizza Express should finish £28,800 above its target with only a 2.2% chance of falling short.
+
+
+
