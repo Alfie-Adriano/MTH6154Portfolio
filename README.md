@@ -11,7 +11,7 @@ module MTH6154 Financial Mathematics I.
 | 2 | Present value | [notes](lessons/02-PresentValue.md) | [xlsx](spreadsheets/02-PresentValue.xlsx) |
 | 3 | Immunisation | [notes](lessons/03-Immunisation.md)| [xlsx](spreadsheets/03-Immunisation.xlsx) |
 | 4 | Bonds |[notes](lessons/04-Bonds.md) | [xlsx](spreadsheets/04-Bonds.xlsx)|
-| 5 | Stochastic interest rates | | |
+| 5 | Stochastic interest rates | [notes](lessons/05-StochasticRates.md) | [xlsx](spreadsheets/05-StochasticRates.xlsx) |
 | 6 | Equities and derivatives | | |
 | 8 | The arbitrage theorem | | |
 | 9 | One-period binomial model | | |
