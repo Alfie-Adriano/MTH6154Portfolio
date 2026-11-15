@@ -319,7 +319,7 @@ $\mathbb E[G_i]=e^{0.057+0.0008/2}=e^{0.0574}.$
 
 The expected balance is
 
-$\mathbb E[B_{10}]=100\,\mathbb E\left[\prod_{i=1}^{10}G_i\right]=100\prod_{i=1}^{10}\mathbb E[G_i]=100e^{0.574}\approx\£177.54.$
+$\mathbb E[B_{10}]=100\,\mathbb E\left[\prod_{i=1}^{10}G_i\right]=100\prod_{i=1}^{10}\mathbb E[G_i]=100e^{0.574}\approx£177.54.$
 
 Independence is used when we replace the expectation of the product with the product of the expectations. The growth factors are independent because each one depends on its own year’s rate.
 
@@ -329,7 +329,7 @@ $\ln(B_{10}/100)=\sum_{i=1}^{10}R_i\sim\mathcal N(0.570,0.008)$
 
 We use the independence again so that we are able to add the variances together. Our target is to get $1.10\,\mathbb E[B_{10}]=110e^{0.574}$ which is roughly £195.29. Then we take logs and standardise so we get:
 
-$\mathbb P(B_{10}>1.10\,\mathbb E[B_{10}])&=1-\Phi\left(\frac{\ln(1.10)+0.574-0.570}{\sqrt{0.008}}\right)$
+$\mathbb P\left(B_{10}>1.10\mathbb E[B_{10}]\right)=1-\Phi\left(\frac{\ln(1.10)+0.574-0.570}{\sqrt{0.008}}\right)$
 
 $\approx 1-\Phi(1.1103)\approx13.34%$
 
