@@ -65,6 +65,8 @@ The variance is used to measure how much the possible balances spread out around
 
 $\text{Var}(B_n)=P^2\left(\mathbb{E}[G^{2n}]-\left(\mathbb{E}[G^n]\right)^2\right)$
 
+[See Example 1](#example-1-puregym-saving-for-renovations)
+
 
 ### Varying interest rates
 
@@ -84,6 +86,8 @@ $\mathbb{E}[B_n]=P\left(\mathbb{E}[G]\right)^n,$, $\text{Var}(B_n)=P^2\left[\lef
 
 The variance formula then follows by squaring the balance and then applying independence to the squared growth factors. The iid assumption also simplifies both calculations because in practice, rates stay high or low across several years, so one year's rate can give information regarding the next year.
 
+[See Example 2](#example-2-wright-brothers-saves-for-fleet-repairs)
+
 
 ### Regular deposits
 
@@ -100,6 +104,8 @@ If every deposit was the same amount D and the yearly rates are also iid then we
 $\mathbb{E}[B_n]=D(g+g^2+\cdots+g^n)=\frac{Dg(1-g^n)}{1-g}, \quad g\ne1.$
 
 If $g=1$ every term then equals $D$ so the expected balance comes out as $nD$.
+
+[See Example 3](#example-3-saving-for-the-phantom-of-the-operas-50th-anniversary)
 
 
 ### Log normal interest rates
@@ -123,6 +129,8 @@ $\mathbb{E}[B_n]=Pe^{n\mu+n\sigma^2/2}.$
 To find the probability that $B_n$ exceeds a target of $x$ then we use $B_n = PS_n$ and then take logarithms and convert to a standard normal probability:
 
 $\mathbb{P}(B_n>x)=1-\Phi\left(\frac{\ln(x/P)-n\mu}{\sigma\sqrt{n}}\right).$
+
+[See Example 4](#example-4-pizza-express-saves-for-wood-fired-ovens)
 
 
 ## My examples
@@ -203,7 +211,7 @@ $\ln S_5\sim\mathcal N\bigl(5(0.05),\,5(0.015)^2\bigr)=\mathcal N(0.25,0.001125)
 
 We then calculate the expected balance as is below:
 
-$\mathbb E[B_5]=340{,}000e^{0.25+0.001125/2}\approx\£436{,}800.$
+$\mathbb E[B_5]=340{,}000e^{0.25+0.001125/2}\approx£436{,}800.$
 
 To exceed £408,000 the deposit needs its growth factor to be above 1.20 (408,000/340,000=1.2). So we take logs and standardise as is below:
 
