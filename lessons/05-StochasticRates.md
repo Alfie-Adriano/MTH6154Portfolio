@@ -174,4 +174,20 @@ $\mathbb{E}[B_2]=500{,}000(1.045)^2=£546{,}012.50.$
 Hence the company can budget around an expected balance of £546,012.50, though it would have £520,200 available for repairs if both years are low at 2%.
 
 
+### Example 3: Saving for The Phantom of the Opera's 50th anniversary
+
+The West End producers of The Phantom of the Opera are depositing £7500 at the beginning of each year for the next three years to help pay for grander props in advance of the show's 50th anniversary. Each year the effective interest rate is equally likely to be 3% or 6.5% (independently of other years).
+
+What is the expected balance at the end of year three?
+
+First we calculate the expected growth factor for each year as
+
+$g=0.5(1.03)+0.5(1.065)=1.0475.$
+
+The first deposit earns interest for three years, the second for two and the third for one. Because the yearly rates are independent we will multiply the expected growth factors for the years each deposit is in the account.
+
+$\mathbb{E}[B_3]=7{,}500\bigl(1.0475^3+1.0475^2+1.0475\bigr)\approx\£24{,}705.99.$
+
+The producers deposit £22,500 in total and they are expected to earn £2205.99 in interest. The first deposit contributes the most to the interest because it stays in the account the longest.
+
 
