@@ -39,6 +39,26 @@
 
 ### Forward contracts and the forward price
 
+A forward contract is when two parties commit to trade an asset at a future date $T$ for a price of $K$ agreed today. The buyer takes a long position whilst the seller a short position. At delivery, their payoffs per unit are:
+
+$\text{Long payoff}=S_T-K,\qquad\text{Short payoff}=K-S_T$
+
+The fair forward price of $F_T$ is the delivery price that makes a new contract that is worth zero today. An asset that pays no income before delivery is calculated through:
+
+$F_T=\frac{S_0}{D(T)}$
+
+Using continuous compounding we get:
+
+$F_T=S_0e^{rT}$
+
+This follows from no arbitrage meaning that buying the asset today uses borrowed money costs of $S_0e^{rT}$ to repay at the delivery so purchasing through a forward must have same cost.
+
+For foreign currency though, holding the currency will also earn foreign interest, with the exchange quoted as pounds per euro, making the fair forward rate:
+
+$F_T=S_0e^{(r_{\text{GBP}}-r_{\text{EUR}})T}$
+
+The sterling rate shows the cost of financing the purchase, whilst the euro shows the interest that is earned on the euros that are held until the delivery.
+
 
 ### Options and their payoffs
 
